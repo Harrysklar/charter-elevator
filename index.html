@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charter Elevator Wireframe</title>
+
+  <!-- 1) Tailwind CDN loader -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 2) Your custom overrides -->
+  <link rel="stylesheet" href="/styles/style.css" />
+</head>
+<body>
+
+  <!-- Two-Tier Sticky Header with Logo and Prominent Contact -->
+  <header role="banner" class="sticky top-0 z-50">
+    <!-- Top Bar: Logo Text + Image + Contact -->
+    <div class="border-b">
+      <div class="container mx-auto flex items-center justify-between py-3 px-4">
+        <!-- Logo Text + Image -->
+        <div class="flex items-center space-x-2">
+          <div class="logo text-lg font-bold">Charter Elevator</div>
+          <img
+            src="https://charterelevator.com/wp-content/uploads/2022/09/logo-centered.png"
+            alt="Charter Elevator company logo"
+            class="h-8 w-auto"
+          />
+        </div>
+        <!-- Prominent Contact Us -->
+        <div class="text-right">
+          <div class="text-sm font-semibold">Contact Us:</div>
+          <a
+            href="tel:877-632-4278"
+            class="font-bold text-xl"
+            aria-label="Call Charter Elevator at 877-632-4278"
+          >877-632-4278</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Nav Bar -->
+    <nav role="navigation" aria-label="Primary" class="bg-surface">
+      <div class="container mx-auto flex items-center justify-between py-3 px-4">
+        <!-- Hamburger button: visible on small screens only -->
+        <button id="nav-toggle" class="md:hidden focus:outline-none">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <!-- Desktop nav links -->
+        <ul id="nav-links" class="hidden md:flex justify-evenly flex-1 max-w-2xl font-medium">
+          <li><a href="#home" class="nav-link" aria-label="Home page">Home</a></li>
+          <li><a href="#services" class="nav-link" aria-label="Our services">Services</a></li>
+          <li><a href="#charterview" class="nav-link" aria-label="CharterView platform">CharterView</a></li>
+          <li><a href="#about" class="nav-link" aria-label="About Charter Elevator">About Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Mobile menu: hidden by default -->
+      <div id="mobile-menu" class="md:hidden hidden bg-surface">
+        <ul class="flex flex-col space-y-2 p-4">
+          <li><a href="#home" class="nav-link" aria-label="Home page">Home</a></li>
+          <li><a href="#services" class="nav-link" aria-label="Our services">Services</a></li>
+          <li><a href="#charterview" class="nav-link" aria-label="CharterView platform">CharterView</a></li>
+          <li><a href="#about" class="nav-link" aria-label="About Charter Elevator">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main">
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center">
+      <div
+        class="absolute inset-0 bg-cover bg-center opacity-50"
+        style="background-image:url('https://charterelevator.com/wp-content/uploads/2022/09/image2.png')"
+        role="img"
+        aria-label="Elevator maintenance technician at work"
+      ></div>
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="relative flex flex-col items-center space-y-4 px-4">
+        <h1 class="text-4xl md:text-5xl font-bold text-center">Reliable Elevator Service, 24/7</h1>
+        <p class="text-lg md:text-xl text-center">Get a Free Quote in Minutes</p>
+        <a
+          href="#quote-form"
+          class="btn-primary inline-block mx-auto mt-4 px-6 py-3"
+          aria-label="Book an appointment for a free quote"
+        >Book an Appointment</a>
+      </div>
+    </section>
+
+    <!-- Inline Booking Form -->
+    <section id="quote-form" class="py-12">
+      <div class="container mx-auto max-w-md">
+        <form class="space-y-4" aria-label="Booking form">
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="w-full p-2 border rounded"
+            aria-label="Enter your name"
+          />
+          <input
+            type="tel"
+            placeholder="Your Phone Number"
+            class="w-full p-2 border rounded"
+            aria-label="Enter your phone number"
+          />
+          <button
+            type="submit"
+            class="btn-primary w-full py-2 rounded"
+            aria-label="Submit booking form"
+          >Book an Appointment</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services" class="py-16 bg-surface">
+      <div class="container mx-auto space-y-8">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2">
+            <!-- replaced placeholder div with real img -->
+            <img
+              src="https://via.placeholder.com/600x400.png?text=Elevator+Maintenance"
+              alt="Illustration of elevator maintenance"
+              class="rounded w-full h-auto"
+            />
+          </div>
+          <div class="md:w-1/2 p-4">
+            <h2 class="text-2xl font-semibold">Elevator Maintenance</h2>
+            <p class="mt-2">Keep your elevators running smoothly with our comprehensive maintenance plans.</p>
+            <a
+              href="#packages"
+              class="btn-secondary mt-4 inline-block"
+              aria-label="See our maintenance packages"
+            >See Our Packages</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CharterView Section -->
+    <section id="charterview" class="py-16">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold">CharterView Platform</h2>
+        <p class="mt-4">Monitor and manage your elevator assets in real-time.</p>
+        <!-- replaced placeholder div with real img -->
+        <img
+          src="https://via.placeholder.com/800x300.png?text=CharterView+Dashboard"
+          alt="Screenshot mockup of CharterView dashboard"
+          class="mt-8 rounded w-full h-auto"
+        />
+        <a
+          href="#packages"
+          class="btn-primary mt-6 inline-block"
+          aria-label="View CharterView packages"
+        >See Our Packages</a>
+      </div>
+    </section>
+
+    <!-- About & Testimonials -->
+    <section id="about" class="py-16 bg-surface">
+      <div class="container mx-auto space-y-8">
+        <h2 class="text-3xl font-bold text-center">Why Choose Charter Elevator?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-4 shadow rounded" aria-label="Expertise">Expertise</div>
+          <div class="p-4 shadow rounded" aria-label="Value">Value</div>
+          <div class="p-4 shadow rounded" aria-label="Innovation">Innovation</div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="p-4 shadow rounded" aria-label="Testimonial from Client A">"Great service!" - Client A</div>
+          <div class="p-4 shadow rounded" aria-label="Testimonial from Client B">"Highly recommend." - Client B</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="py-8 bg-bg">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="font-semibold">Contact Us</h3>
+        <p>877-632-4278</p>
+        <p><a href="mailto:info@charterelevator.com" aria-label="Email Charter Elevator">info@charterelevator.com</a></p>
+      </div>
+      <div>
+        <h3 class="font-semibold">Address</h3>
+        <p>123 Main Street</p>
+        <p>City, State ZIP</p>
+      </div>
+      <div>
+        <h3 class="font-semibold">Follow Us</h3>
+        <div class="flex space-x-4" aria-label="Social media links">
+          <a href="#" aria-label="Follow us on Facebook"><div class="w-6 h-6 rounded-full"></div></a>
+          <a href="#" aria-label="Follow us on Twitter"><div class="w-6 h-6 rounded-full"></div></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Survey Widget -->
+  <button
+    id="open-survey"
+    class="fixed bottom-8 right-8 z-50 rounded-full p-4 shadow-lg btn-primary"
+    aria-label="Open review survey"
+    >Review Us</button>
+
+  <!-- Survey Modal -->
+  <div
+    id="survey-modal"
+    class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="survey-title"
+  >
+    <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4 shadow-2xl">
+      <h3 id="survey-title" class="text-xl font-bold mb-4">How was your experience?</h3>
+      <div class="flex justify-between mb-4">
+        <button data-rating="1" class="star text-3xl" aria-label="1 star">☆</button>
+        <button data-rating="2" class="star text-3xl" aria-label="2 stars">☆</button>
+        <button data-rating="3" class="star text-3xl" aria-label="3 stars">☆</button>
+        <button data-rating="4" class="star text-3xl" aria-label="4 stars">☆</button>
+        <button data-rating="5" class="star text-3xl" aria-label="5 stars">☆</button>
+      </div>
+      <button
+        id="close-survey"
+        class="mt-2 text-sm hover:underline"
+        aria-label="Cancel survey"
+      >Cancel</button>
+    </div>
+  </div>
+
+  <!-- Internal Feedback Modal -->
+  <div
+    id="feedback-modal"
+    class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="feedback-title"
+  >
+    <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4 shadow-2xl">
+      <h3 id="feedback-title" class="text-xl font-bold mb-4">We’re sorry to hear that.</h3>
+      <p class="mb-4">Please tell us what went wrong, and we’ll make it right.</p>
+      <form id="feedback-form" class="space-y-4" aria-label="Internal feedback form">
+        <input
+          type="email"
+          placeholder="Your Email (optional)"
+          class="w-full p-2 border rounded"
+          aria-label="Enter your email (optional)"
+        />
+        <input
+          type="tel"
+          placeholder="Your Phone (optional)"
+          class="w-full p-2 border rounded"
+          aria-label="Enter your phone (optional)"
+        />
+        <textarea
+          placeholder="Your feedback..."
+          class="w-full p-2 border rounded"
+          required
+          aria-label="Describe what went wrong"
+        ></textarea>
+        <div class="flex justify-between items-center">
+          <button
+            type="submit"
+            class="px-4 py-2 rounded"
+            aria-label="Submit feedback"
+          >Submit Feedback</button>
+          <button
+            type="button"
+            id="close-feedback"
+            class="text-sm hover:underline"
+            aria-label="Cancel feedback"
+          >Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+    const openBtn = document.getElementById('open-survey');
+    const modal = document.getElementById('survey-modal');
+    const closeBtn = document.getElementById('close-survey');
+    const stars = document.querySelectorAll('#survey-modal .star');
+    const feedbackModal = document.getElementById('feedback-modal');
+    const closeFeedback = document.getElementById('close-feedback');
+
+    // Open/close survey modal
+    openBtn.addEventListener('click', () => modal.classList.remove('hidden'));
+    closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+
+    // Escape key closes any open modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        modal.classList.add('hidden');
+        feedbackModal.classList.add('hidden');
+      }
+    });
+
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        const rating = parseInt(star.getAttribute('data-rating'));
+        modal.classList.add('hidden');
+        if (rating >= 4) {
+          alert('Thank you for the review! Please leave a review for us on Google Maps.');
+          window.open(
+            'https://www.google.com/maps/place/Charter+Elevator',
+            '_blank'
+          );
+        } else {
+          feedbackModal.classList.remove('hidden');
+        }
+      });
+    });
+
+    closeFeedback.addEventListener('click', () => feedbackModal.classList.add('hidden'));
+
+    document.getElementById('feedback-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your feedback! We will reach out to you soon.');
+      feedbackModal.classList.add('hidden');
+      // Here you could send the feedback to your internal endpoint
+    });
+  </script>
+
+  <!-- Nav enhancement script -->
+  <script>
+    // Toggle mobile menu
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    navToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Scroll-spy & highlight
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('main section[id]');
+    function setActive(id) {
+      navLinks.forEach(link => {
+        link.classList.remove('text-secondary','font-bold');
+        if (link.getAttribute('href') === `#${id}`) {
+          link.classList.add('text-secondary','font-bold');
+        }
+      });
+    }
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        setActive(link.getAttribute('href').slice(1));
+        mobileMenu.classList.add('hidden');
+      });
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) setActive(e.target.id);
+      });
+    }, { rootMargin: '0px 0px -50% 0px' });
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+  <!-- Floating Call-Now Button -->
+  <a
+    href="tel:877-632-4278"
+    class="btn-call"
+    aria-label="Call Charter Elevator now"
+  >Call Now</a>
+
+</body>
+</html>

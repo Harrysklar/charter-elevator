@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Charter Elevator Home</title>
+  <title>Modernization | Charter Elevator</title>
 
   <!-- Tailwind CDN loader -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -17,109 +17,21 @@
 
   <!-- Wrap all page content below -->
   <div class="site-wrapper">
-    <main role="main">
-      <!-- Hero Section -->
-      <section id="home" class="relative h-screen flex items-center justify-center">
-        <div
-          class="absolute inset-0 bg-cover bg-center opacity-50"
-          style="background-image:url('https://charterelevator.com/wp-content/uploads/2022/09/image2.png')"
-          role="img"
-          aria-label="Elevator maintenance technician at work"
-        ></div>
-        <div class="absolute inset-0 bg-black/40"></div>
-        <div class="relative flex flex-col items-center space-y-4 px-4">
-          <h1 class="text-4xl md:text-5xl font-bold text-center">Reliable Elevator Service, 24/7</h1>
-          <p class="text-lg md:text-xl text-center">Get a Free Quote in Minutes</p>
-          <a
-            href="#quote-form"
-            class="btn-primary inline-block mx-auto mt-4 px-6 py-3"
-            aria-label="Book an appointment for a free quote"
-          >Book an Appointment</a>
-        </div>
-      </section>
-
-      <!-- Inline Booking Form -->
-      <section id="quote-form" class="py-12">
-        <div class="container mx-auto max-w-md">
-          <form class="space-y-4" aria-label="Booking form">
-            <input
-              type="text"
-              placeholder="Your Name"
-              class="w-full p-2 border rounded"
-              aria-label="Enter your name"
-            />
-            <input
-              type="tel"
-              placeholder="Your Phone Number"
-              class="w-full p-2 border rounded"
-              aria-label="Enter your phone number"
-            />
-            <button
-              type="submit"
-              class="btn-primary w-full py-2 rounded"
-              aria-label="Submit booking form"
-            >Book an Appointment</button>
-          </form>
-        </div>
-      </section>
-
-      <!-- Services Overview -->
-      <section id="services" class="py-16 bg-surface">
-        <div class="container mx-auto space-y-8">
-          <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2">
-              <img
-                src="https://via.placeholder.com/600x400.png?text=Elevator+Maintenance"
-                alt="Illustration of elevator maintenance"
-                class="rounded w-full h-auto"
-              />
-            </div>
-            <div class="md:w-1/2 p-4">
-              <h2 class="text-2xl font-semibold">Elevator Maintenance</h2>
-              <p class="mt-2">Keep your elevators running smoothly with our comprehensive maintenance plans.</p>
-              <a
-                href="maintenance.html"
-                class="btn-secondary mt-4 inline-block"
-                aria-label="See our maintenance services"
-              >See Maintenance</a>
-            </div>
+    <main role="main" class="py-16">
+      <div class="container mx-auto px-4">
+        <h1 class="text-3xl font-bold mb-6">Modernization</h1>
+        <p class="mb-4">Placeholder content for the Modernization page. Discuss elevator upgrade options, timelines, and ROI.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h2 class="text-2xl font-semibold mb-2">Control System Upgrades</h2>
+            <p>Explain benefits of modernizing controls, energy efficiency, and improved ride quality.</p>
+          </div>
+          <div>
+            <h2 class="text-2xl font-semibold mb-2">Cabin & Door Modernization</h2>
+            <p>Detail aesthetic and safety improvements, new finishes, and compliance upgrades.</p>
           </div>
         </div>
-      </section>
-
-      <!-- CharterView Section -->
-      <section id="charterview" class="py-16">
-        <div class="container mx-auto text-center">
-          <h2 class="text-3xl font-bold">CharterView Platform</h2>
-          <p class="mt-4">Monitor and manage your elevator assets in real-time.</p>
-          <img
-            src="https://via.placeholder.com/800x300.png?text=CharterView+Dashboard"
-            alt="Screenshot mockup of CharterView dashboard"
-            class="mt-8 rounded w-full h-auto"
-          />
-          <a
-            href="resources.html"
-            class="btn-primary mt-6 inline-block"
-            aria-label="View resources and videos"
-          >See Resources</a>
-        </div>
-      </section>
-
-      <!-- About & Testimonials -->
-      <section id="about" class="py-16 bg-surface">
-        <div class="container mx-auto space-y-8">
-          <h2 class="text-3xl font-bold text-center">Why Choose Charter Elevator?</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="p-4 shadow rounded" aria-label="Expertise">Expertise</div>
-            <div class="p-4 shadow rounded" aria-label="Value">Value</div>
-            <div class="p-4 shadow rounded" aria-label="Innovation">Innovation</div>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="p-4 shadow rounded" aria-label="Testimonial from Client A">"Great service!" – Client A</div>
-            <div class="p-4 shadow rounded" aria-label="Testimonial from Client B">"Highly recommend." – Client B</div>
-          </div>
-        </div>
-      </section>
+      </div>
     </main>
 
     <!-- Footer placeholder -->
@@ -165,7 +77,7 @@
       aria-modal="true"
       aria-labelledby="feedback-title"
     >
-      <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4 shadow-2xl">
+      <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4 shadow-2XL">
         <h3 id="feedback-title" class="text-xl font-bold mb-4">We’re sorry to hear that.</h3>
         <p class="mb-4">Please tell us what went wrong, and we’ll make it right.</p>
         <form id="feedback-form" class="space-y-4" aria-label="Internal feedback form">

@@ -1,10 +1,16 @@
-/* style.css */
+/* styles/style.css */
+
+/* Always reserve scrollbar space so pages don’t “jump” */
+html {
+  overflow-y: scroll;
+}
+
 /* Charter color palette */
 :root {
   --color-primary: #005587;
   --color-primary-light: #1E77AE;
   --color-secondary: #F29300;
-  --color-bg: #FFFFFF;
+  --color-bg: #ECFDF5;       /* pale green background */
   --color-surface: #F5F7FA;
   --color-text: #1F2A37;
   --color-muted: #637381;
@@ -15,6 +21,18 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
+}
+
+/* Make .site-wrapper a flex column that fills the viewport minus the fixed header */
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 4rem); /* 4rem equals the header’s height */
+}
+
+/* Push the footer placeholder to the bottom */
+#site-footer {
+  margin-top: auto;
 }
 
 /* Headings */
@@ -76,12 +94,12 @@ input:focus, textarea:focus, select:focus {
   color: var(--color-secondary);
 }
 
-/* 1) Smooth scrolling for anchor links */
+/* Smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
 }
 
-/* 2) Floating call-now button */
+/* Floating call-now button */
 .btn-call {
   position: fixed;
   bottom: 2rem;
@@ -99,7 +117,7 @@ html {
   background-color: #d67e00;
 }
 
-/* 3) Subtle animations on primary/secondary buttons */
+/* Subtle animations on primary/secondary buttons */
 .btn-primary,
 .btn-secondary {
   transition: transform 0.2s ease, background-color 0.2s ease;

@@ -14,7 +14,7 @@
   `;
   document.head.appendChild(styleTag);
 
-  // 2) Inject a two‐row grid header; logo spans both rows on left
+  // 2) Inject a two-row grid header; logo spans both rows on left
   const headerHTML = `
     <header
       role="banner"
@@ -34,7 +34,7 @@
           </a>
         </div>
 
-        <!-- Top‐right contact bar (col-span-9, row-span-1), pushed to far right -->
+        <!-- Top-right contact bar (col-span-9, row-span-1), pushed to far right -->
         <div class="col-span-9 row-span-1 flex justify-end items-center pr-4">
           <div class="flex flex-col items-center">
             <div class="text-sm font-semibold mb-1">Available 24/7 for Emergencies!</div>
@@ -46,7 +46,7 @@
           </div>
         </div>
 
-        <!-- Bottom‐right nav bar (col-span-9, row-span-1) -->
+        <!-- Bottom-right nav bar (col-span-9, row-span-1) -->
         <nav
           role="navigation"
           aria-label="Primary"
@@ -83,35 +83,41 @@
     </header>
   `;
 
-  // 3) Footer unchanged
+  // 3) Inject updated footer
   const footerHTML = `
-    <footer id="contact" class="py-8 bg-bg">
-      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer id="site-footer" class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+        <!-- Quick Links -->
         <div>
-          <h3 class="font-semibold">Contact Us</h3>
-          <p>877-632-4278</p>
-          <p>
-            <a href="mailto:info@charterelevator.com" aria-label="Email Charter Elevator"
-              >info@charterelevator.com</a
-            >
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-orange-500">About Us</a></li>
+            <li><a href="services.html" class="hover:text-orange-500">Services</a></li>
+            <li><a href="locations.html" class="hover:text-orange-500">Locations</a></li>
+            <li><a href="contact.html" class="hover:text-orange-500">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Headquarters -->
+        <div>
+          <h4 class="font-semibold mb-4">Our Headquarters</h4>
+          <p class="text-gray-200">
+            9751 Moose Rd., Unit #9<br />
+            Murrells Inlet, SC 29576
           </p>
         </div>
+
+        <!-- Contact Info -->
         <div>
-          <h3 class="font-semibold">Address</h3>
-          <p>123 Main Street</p>
-          <p>City, State ZIP</p>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <p class="text-gray-200">
+            Phone: <a href="tel:877-632-4278" class="hover:text-orange-500">877-632-4278</a><br />
+            Email: <a href="mailto:info@charterelevator.com" class="hover:text-orange-500">info@charterelevator.com</a>
+          </p>
         </div>
-        <div>
-          <h3 class="font-semibold">Follow Us</h3>
-          <div class="flex space-x-4" aria-label="Social media links">
-            <a href="#" aria-label="Follow us on Facebook">
-              <div class="w-6 h-6 rounded-full"></div>
-            </a>
-            <a href="#" aria-label="Follow us on Twitter">
-              <div class="w-6 h-6 rounded-full"></div>
-            </a>
-          </div>
-        </div>
+      </div>
+      <div class="mt-8 text-center text-sm text-gray-500">
+        © 2025 Charter Elevator. All Rights Reserved.
       </div>
     </footer>
   `;

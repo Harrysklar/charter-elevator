@@ -1,0 +1,212 @@
+<!-- location.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charter Elevator • Locations</title>
+
+  <!-- Tailwind CDN loader -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+  <!-- Header placeholder (injected by header-footer.js) -->
+  <div id="site-header"></div>
+
+  <div class="site-wrapper">
+    <!-- Offset for fixed header (8rem) -->
+    <main role="main" class="pt-32 pb-16">
+      <div class="container mx-auto max-w-3xl space-y-12 px-4">
+
+        <!-- Page Title -->
+        <section class="text-center">
+          <h1 class="text-4xl font-bold mb-4">Service Areas &amp; Headquarters</h1>
+          <p class="text-gray-700 leading-relaxed">
+            Our regional offices and headquarters across North and South Carolina.
+          </p>
+        </section>
+
+        <!-- Headquarters -->
+        <section id="headquarters" class="bg-surface p-6 rounded-lg shadow-md">
+          <h2 class="text-3xl font-semibold mb-4">Headquarters</h2>
+          <p class="text-gray-700 mb-4">
+            9751 Moose Rd., Unit #9<br />
+            Murrells Inlet, SC 29576
+          </p>
+          <p class="text-gray-700">
+            <strong>Scott Gaskill, President/CEO</strong><br />
+            <strong>Tammy Black, Regional Office Director</strong>
+          </p>
+        </section>
+
+        <!-- Charleston Office -->
+        <section id="charleston" class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="text-3xl font-semibold mb-4">Charleston</h2>
+          <p class="text-gray-700 mb-4">
+            1514 Mathis Ferry Rd. A109<br />
+            Mount Pleasant, SC 29464
+          </p>
+          <p class="text-gray-700">
+            <strong>Ben Rabin, Regional General Manager</strong>
+          </p>
+        </section>
+
+        <!-- Raleigh / Durham Office -->
+        <section id="raleigh-durham" class="bg-surface p-6 rounded-lg shadow-md">
+          <h2 class="text-3xl font-semibold mb-4">Raleigh / Durham</h2>
+          <p class="text-gray-700 mb-4">
+            2019 Production Dr., Ste. 107<br />
+            Apex, NC 27539
+          </p>
+          <p class="text-gray-700">
+            <strong>Keith Desmond, Sr-Director Operations</strong>
+          </p>
+        </section>
+
+        <!-- Wilmington Office -->
+        <section id="wilmington" class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="text-3xl font-semibold mb-4">Wilmington, NC</h2>
+          <p class="text-gray-700 mb-4">
+            321 N Front St., Ste. 310<br />
+            Wilmington, NC 28401
+          </p>
+          <p class="text-gray-700">
+            <strong>Ben Rabin, Regional General Manager</strong>
+          </p>
+        </section>
+
+        <!-- Columbia Office -->
+        <section id="columbia" class="bg-surface p-6 rounded-lg shadow-md">
+          <h2 class="text-3xl font-semibold mb-4">Columbia, SC</h2>
+          <p class="text-gray-700 mb-4">
+            401 Western Ln., Ste. 2<br />
+            Irmo, SC 29063
+          </p>
+          <p class="text-gray-700">
+            <strong>Ben Rabin, Business Development Manager</strong><br />
+            <strong>Jordan Clemons, Lead Maintenance Technician</strong>
+          </p>
+        </section>
+
+        <!-- Myrtle Beach Office -->
+        <section id="myrtle-beach" class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="text-3xl font-semibold mb-4">Myrtle Beach</h2>
+          <p class="text-gray-700 mb-4">
+            9751 Moose Rd., Unit #6 and #9<br />
+            Murrells Inlet, SC 29576
+          </p>
+          <p class="text-gray-700">
+            <strong>Ben Rabin, Regional General Manager</strong><br />
+            <strong>John DiCapua, Maintenance Lead</strong>
+          </p>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Survey Modal -->
+    <div
+      id="survey-modal"
+      class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="survey-title"
+    >
+      <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4 shadow-2xl">
+        <h3 id="survey-title" class="text-xl font-bold mb-4">How was your experience?</h3>
+        <div class="flex justify-between mb-4">
+          <button data-rating="1" class="star text-3xl" aria-label="1 star">☆</button>
+          <button data-rating="2" class="star text-3xl" aria-label="2 stars">☆</button>
+          <button data-rating="3" class="star text-3xl" aria-label="3 stars">☆</button>
+          <button data-rating="4" class="star text-3xl" aria-label="4 stars">☆</button>
+          <button data-rating="5" class="star text-3xl" aria-label="5 stars">☆</button>
+        </div>
+        <button
+          id="close-survey"
+          class="mt-2 text-sm hover:underline"
+          aria-label="Cancel survey"
+        >Cancel</button>
+      </div>
+    </div>
+
+    <!-- Internal Feedback Modal -->
+    <div
+      id="feedback-modal"
+      class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="feedback-title"
+    >
+      <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4 shadow-2xl">
+        <h3 id="feedback-title" class="text-xl font-bold mb-4">We’re sorry to hear that.</h3>
+        <p class="mb-4">Please tell us what went wrong, and we’ll make it right.</p>
+        <form id="feedback-form" class="space-y-4" aria-label="Internal feedback form">
+          <input
+            type="email"
+            placeholder="Your Email (required)"
+            class="w-full p-2 border rounded"
+            aria-label="Enter your email (required)"
+            required
+          />
+          <textarea
+            placeholder="Your feedback..."
+            class="w-full p-2 border rounded"
+            required
+            aria-label="Describe what went wrong"
+          ></textarea>
+          <div class="flex justify-between items-center">
+            <button
+              type="submit"
+              class="px-4 py-2 rounded"
+              aria-label="Submit feedback"
+            >Submit Feedback</button>
+            <button
+              type="button"
+              id="close-feedback"
+              class="text-sm hover:underline"
+              aria-label="Cancel feedback"
+            >Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Floating Review Us Button (above) -->
+    <button
+      id="open-survey"
+      class="fixed bottom-24 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 shadow-lg"
+      aria-label="Open review survey"
+    >
+      Review Us
+    </button>
+
+    <!-- Floating Call-Now Button (below) -->
+    <a
+      href="tel:877-632-4278"
+      class="fixed bottom-8 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 flex items-center shadow-lg"
+      aria-label="Emergency service 24/7 — Call 877-632-4278"
+    >
+      <img
+        src="images/white_phone_transparent.png"
+        alt="Emergency Call Icon"
+        class="h-8 w-8 flex-shrink-0"
+      />
+      <div class="flex flex-col ml-4">
+        <span class="text-[11px] uppercase font-medium leading-none">Emergency 24/7 Dispatch</span>
+        <span class="text-lg font-bold leading-none">Call: 877-632-4278</span>
+      </div>
+    </a>
+
+    <!-- Footer placeholder (injected by header-footer.js) -->
+    <div id="site-footer"></div>
+  </div> <!-- end .site-wrapper -->
+
+  <!-- Required scripts -->
+  <script src="scripts/header-footer.js"></script>
+  <script src="scripts/survey.js"></script>
+  <script src="scripts/nav.js"></script>
+</body>
+</html>

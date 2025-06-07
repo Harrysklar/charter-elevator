@@ -1,0 +1,202 @@
+<!-- services.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charter Elevator • Services</title>
+
+  <!-- Tailwind CDN loader -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+  <!-- Header placeholder (injected by header-footer.js) -->
+  <div id="site-header"></div>
+
+  <div class="site-wrapper">
+    <!-- Offset for fixed header (8rem) -->
+    <main role="main" class="pt-32 pb-16">
+      <div class="container mx-auto space-y-16 px-4 max-w-3xl">
+
+        <!-- Page Title -->
+        <section class="text-center">
+          <h1 class="text-4xl font-bold mb-4">Our Services</h1>
+          <p class="text-gray-700 leading-relaxed">
+            Customized solutions for Maintenance, Repair, and Modernization to keep your elevators safe, reliable, and efficient.
+          </p>
+        </section>
+
+        <!-- Maintenance Section -->
+        <section id="maintenance" class="bg-surface p-6 rounded-lg shadow-md">
+          <h2 class="text-3xl font-semibold mb-4">MAINTENANCE</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Customized contracts focusing on safety, reliability, and code compliance. The goal is to reduce downtime, extend equipment life, and enhance safety.
+          </p>
+          <ul class="list-disc list-inside text-gray-700 pl-4 space-y-2">
+            <li><strong>Tailored Maintenance Plans:</strong> Based on equipment type, usage, and environment.</li>
+            <li><strong>Compliance:</strong> Ensure compliance with ASME A17.1 Safety Code standards. Includes inspection violation management and corrections.</li>
+            <li><strong>Guaranteed Routine Service:</strong> Contracts specify number of visits per year. Cleaning, lubricating, and adjusting key components like doors, brakes, and ropes.</li>
+            <li><strong>Flexible Contracts:</strong> From basic ‘Oil &amp; Grease’ to comprehensive Full Maintenance, including emergency repairs.</li>
+            <li><strong>Common Repairs:</strong> Door systems are the most frequently serviced due to heavy use.</li>
+          </ul>
+        </section>
+
+        <!-- Repair Section -->
+        <section id="repair" class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="text-3xl font-semibold mb-4">REPAIR</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Our approach emphasizes safety, fast response, and restoring full elevator functionality.
+          </p>
+          <ul class="list-disc list-inside text-gray-700 pl-4 space-y-2">
+            <li><strong>Clear and Comprehensive Scope:</strong> Providing clear pricing, honest recommendations, with accurate proposals and invoicing.</li>
+            <li><strong>Flexible, Creative Solutions:</strong> Adapting to unique customer and equipment needs, fitting all budgets and timelines with customized, outside-the-box approaches.</li>
+            <li><strong>Importance of Maintenance:</strong> While maintenance reduces the need for major fixes, repair services are ready when breakdowns occur.</li>
+            <li><strong>Common Repairs:</strong> Doors are the most frequently repaired system – issues like door misalignment, sensor failures, and broken locks can cause elevator shutdowns.</li>
+          </ul>
+        </section>
+
+        <!-- Modernization Section -->
+        <section id="modernization" class="bg-surface p-6 rounded-lg shadow-md">
+          <h2 class="text-3xl font-semibold mb-4">MODERNIZATION</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Customized elevator modernization solutions to upgrade aging and obsolete systems for improved safety, reliability, and efficiency. Emphasizes tailored planning, experienced project management, and transparent service without unnecessary upselling.
+          </p>
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-semibold mb-2">What’s Included:</h3>
+              <p class="text-gray-700">
+                Upgrades to controllers, door equipment, motors, safety systems, and cab interiors. Full or phased modernization based on budget and urgency.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-2">When to Modernize:</h3>
+              <p class="text-gray-700">
+                Typical lifespan: 20–30 years depending on elevator type. Signs include frequent breakdowns, part availability issues, and extended downtimes.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-2">Key Benefits:</h3>
+              <ul class="list-disc list-inside text-gray-700 pl-4">
+                <li>Increased safety and energy efficiency</li>
+                <li>Fewer service calls and lower cost of ownership</li>
+                <li>Enhanced ride comfort and property value</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-2">Cost &amp; Timeline Factors:</h3>
+              <p class="text-gray-700">
+                Varies by project scope, building type, number of stops, and regional labor rates. Duration ranges from 12 weeks to 6 months.
+              </p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Survey Modal -->
+    <div
+      id="survey-modal"
+      class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="survey-title"
+    >
+      <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4 shadow-2xl">
+        <h3 id="survey-title" class="text-xl font-bold mb-4">How was your experience?</h3>
+        <div class="flex justify-between mb-4">
+          <button data-rating="1" class="star text-3xl" aria-label="1 star">☆</button>
+          <button data-rating="2" class="star text-3xl" aria-label="2 stars">☆</button>
+          <button data-rating="3" class="star text-3xl" aria-label="3 stars">☆</button>
+          <button data-rating="4" class="star text-3xl" aria-label="4 stars">☆</button>
+          <button data-rating="5" class="star text-3xl" aria-label="5 stars">☆</button>
+        </div>
+        <button
+          id="close-survey"
+          class="mt-2 text-sm hover:underline"
+          aria-label="Cancel survey"
+        >Cancel</button>
+      </div>
+    </div>
+
+    <!-- Internal Feedback Modal -->
+    <div
+      id="feedback-modal"
+      class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="feedback-title"
+    >
+      <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4 shadow-2xl">
+        <h3 id="feedback-title" class="text-xl font-bold mb-4">We’re sorry to hear that.</h3>
+        <p class="mb-4">Please tell us what went wrong, and we’ll make it right.</p>
+        <form id="feedback-form" class="space-y-4" aria-label="Internal feedback form">
+          <input
+            type="email"
+            placeholder="Your Email (required)"
+            class="w-full p-2 border rounded"
+            aria-label="Enter your email (required)"
+            required
+          />
+          <textarea
+            placeholder="Your feedback..."
+            class="w-full p-2 border rounded"
+            required
+            aria-label="Describe what went wrong"
+          ></textarea>
+          <div class="flex justify-between items-center">
+            <button
+              type="submit"
+              class="px-4 py-2 rounded"
+              aria-label="Submit feedback"
+            >Submit Feedback</button>
+            <button
+              type="button"
+              id="close-feedback"
+              class="text-sm hover:underline"
+              aria-label="Cancel feedback"
+            >Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Floating Review Us Button (above) -->
+    <button
+      id="open-survey"
+      class="fixed bottom-24 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 shadow-lg"
+      aria-label="Open review survey"
+    >
+      Review Us
+    </button>
+
+    <!-- Floating Call-Now Button (below) -->
+    <a
+      href="tel:877-632-4278"
+      class="fixed bottom-8 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 flex items-center shadow-lg"
+      aria-label="Emergency service 24/7 — Call 877-632-4278"
+    >
+      <img
+        src="images/white_phone_transparent.png"
+        alt="Emergency Call Icon"
+        class="h-8 w-8 flex-shrink-0"
+      />
+      <div class="flex flex-col ml-4">
+        <span class="text-[11px] uppercase font-medium leading-none">Emergency 24/7 Dispatch</span>
+        <span class="text-lg font-bold leading-none">Call: 877-632-4278</span>
+      </div>
+    </a>
+
+    <!-- Footer placeholder (injected by header-footer.js) -->
+    <div id="site-footer"></div>
+  </div> <!-- end .site-wrapper -->
+
+  <!-- Required scripts -->
+  <script src="scripts/header-footer.js"></script>
+  <script src="scripts/survey.js"></script>
+  <script src="scripts/nav.js"></script>
+</body>
+</html>

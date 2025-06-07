@@ -140,74 +140,7 @@
 
       </div>
     </main>
-    
-    <!-- Survey Modal -->
-    <div
-      id="survey-modal"
-      class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="survey-title"
-    >
-      <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4 shadow-2xl">
-        <h3 id="survey-title" class="text-xl font-bold mb-4">How was your experience?</h3>
-        <div class="flex justify-between mb-4">
-          <button data-rating="1" class="star text-3xl" aria-label="1 star">☆</button>
-          <button data-rating="2" class="star text-3xl" aria-label="2 stars">☆</button>
-          <button data-rating="3" class="star text-3xl" aria-label="3 stars">☆</button>
-          <button data-rating="4" class="star text-3xl" aria-label="4 stars">☆</button>
-          <button data-rating="5" class="star text-3xl" aria-label="5 stars">☆</button>
-        </div>
-        <button
-          id="close-survey"
-          class="mt-2 text-sm hover:underline"
-          aria-label="Cancel survey"
-        >Cancel</button>
-      </div>
-    </div>
 
-    <!-- Internal Feedback Modal -->
-    <div
-      id="feedback-modal"
-      class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="feedback-title"
-    >
-      <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4 shadow-2xl">
-        <h3 id="feedback-title" class="text-xl font-bold mb-4">We’re sorry to hear that.</h3>
-        <p class="mb-4">Please tell us what went wrong, and we’ll make it right.</p>
-        <form id="feedback-form" class="space-y-4" aria-label="Internal feedback form">
-          <input
-            type="email"
-            placeholder="Your Email (required)"
-            class="w-full p-2 border rounded"
-            aria-label="Enter your email (required)"
-            required
-          />
-          <textarea
-            placeholder="Your feedback..."
-            class="w-full p-2 border rounded"
-            required
-            aria-label="Describe what went wrong"
-          ></textarea>
-          <div class="flex justify-between items-center">
-            <button
-              type="submit"
-              class="px-4 py-2 rounded"
-              aria-label="Submit feedback"
-            >Submit Feedback</button>
-            <button
-              type="button"
-              id="close-feedback"
-              class="text-sm hover:underline"
-              aria-label="Cancel feedback"
-            >Cancel</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    
     <!-- Floating Review Us Button (above) -->
     <button
       id="open-survey"

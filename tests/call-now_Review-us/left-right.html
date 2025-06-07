@@ -28,7 +28,7 @@
           </p>
         </section>
 
-        <!-- “Our Value” List -->
+        <!-- “Our Value” Icons Row (one per line) -->
         <section class="space-y-8">
           <div>
             <h2 class="text-2xl font-semibold mb-2">Reliable Performance</h2>
@@ -89,7 +89,7 @@
               <li><strong>Compliance:</strong> Make sure you are compliant to ASME A17.1 Safety Code standards. Inspection violation management + corrections.</li>
               <li><strong>Guaranteed Routine Service:</strong> Contracts specify number of visits per year. Cleaning, lubricating, and adjusting key components like doors, brakes, and ropes.</li>
               <li><strong>Flexible Contracts:</strong> From basic ‘Oil &amp; Grease’ to comprehensive Full Maintenance, including emergency repairs.</li>
-              <li><strong>Common Repairs:</strong> Door systems are the most frequently serviced due to heavy use.</li>
+              <li><strong>Common Repairs:</strong> Door systems are most frequently serviced due to heavy use.</li>
             </ul>
           </div>
 
@@ -140,7 +140,16 @@
 
       </div>
     </main>
-    
+
+    <!-- Survey Widget Trigger -->
+    <button
+      id="open-survey"
+      class="fixed bottom-8 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white rounded-full px-4 py-3 shadow-lg"
+      aria-label="Open review survey"
+    >
+      Review Us
+    </button>
+
     <!-- Survey Modal -->
     <div
       id="survey-modal"
@@ -207,35 +216,29 @@
         </form>
       </div>
     </div>
-    
-    <!-- Floating Review Us Button (above) -->
-    <button
-      id="open-survey"
-      class="fixed bottom-24 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 shadow-lg"
-      aria-label="Open review survey"
-    >
-      Review Us
-    </button>
 
-    <!-- Floating Call-Now Button (below) -->
+    <!-- Floating Call-Now Button -->
     <a
-      href="tel:877-632-4278"
-      class="fixed bottom-8 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 flex items-center shadow-lg"
-      aria-label="Emergency service 24/7 — Call 877-632-4278"
-    >
-      <img
-        src="images/white_phone_transparent.png"
-        alt="Emergency Call Icon"
-        class="h-8 w-8 flex-shrink-0"
-      />
-      <div class="flex flex-col ml-4">
-        <span class="text-[11px] uppercase font-medium leading-none">Emergency 24/7 Dispatch</span>
-        <span class="text-lg font-bold leading-none">Call: 877-632-4278</span>
-      </div>
-    </a>
+  href="tel:877-632-4278"
+  class="fixed bottom-8 left-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 flex items-center shadow-lg"
+  aria-label="Emergency service 24/7 — Call 877-632-4278"
+>
+  <img
+    src="images/white_phone_transparent.png"
+    alt="Emergency Call Icon"
+    class="h-8 w-8 flex-shrink-0"
+  />
 
-    <!-- Footer placeholder (injected by header-footer.js) -->
-    <div id="site-footer"></div>
+  <div class="flex flex-col ml-4">
+    <span class="text-[11px] uppercase font-medium leading-none">Emergency 24/7 Dispatch</span>
+    <span class="text-lg font-bold leading-none">Call: 877-632-4278</span>
+  </div>
+</a>
+
+
+
+  <!-- Footer placeholder (injected by header-footer.js) -->
+  <div id="site-footer"></div>
   </div> <!-- end .site-wrapper -->
 
   <!-- Required scripts -->

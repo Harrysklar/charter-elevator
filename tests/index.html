@@ -16,131 +16,162 @@
   <div id="site-header"></div>
 
   <div class="site-wrapper">
-    <!-- Offset for fixed header (8rem) -->
-    <main role="main" class="pt-32 pb-16">
-      <div class="container mx-auto space-y-16 px-4">
 
-        <!-- Hero / Core Mission Teaser -->
-        <section class="text-center">
-          <h1 class="text-4xl font-bold mb-4">CHARTER CORE MISSION / VALUES</h1>
-          <p class="max-w-2xl mx-auto text-gray-700 leading-relaxed">
-            Reliable Performance • Clear Communication • Rapid Emergency Response • Proactive Service • Flexible, Creative Solutions • Fairness & Transparency • Relationship-Driven Support
-          </p>
-        </section>
+    <!-- Hero Section -->
+    <section
+      class="relative h-screen bg-cover bg-center flex items-center justify-center"
+      style="background-image: url('images/hero.png')"
+    >
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative text-center px-4">
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+          Reliable Elevator Service, 24/7
+        </h1>
+        <p class="text-lg md:text-xl text-white mb-6 max-w-2xl mx-auto">
+          Charter Elevator brings innovative, high-quality solutions you can trust.
+        </p>
+        <a
+          href="contact.html"
+          class="inline-block bg-[#005587] hover:bg-[#1E77AE] text-white rounded-full px-6 py-3 font-semibold"
+        >
+          Get Started
+        </a>
+      </div>
+    </section>
 
-        <!-- “Our Value” List -->
-        <section class="space-y-8">
-          <div>
-            <h2 class="text-2xl font-semibold mb-2">Reliable Performance</h2>
-            <p class="text-gray-700">
-              Elevators that operate smoothly, safely, and consistently with minimal downtime.
-            </p>
-          </div>
-          <div>
-            <h2 class="text-2xl font-semibold mb-2">Clear Communication</h2>
-            <p class="text-gray-700">
-              Prompt, professional updates about service calls, repairs, violations, and scheduling — no surprises.
-            </p>
-          </div>
-          <div>
-            <h2 class="text-2xl font-semibold mb-2">Rapid Emergency Response</h2>
-            <p class="text-gray-700">
-              Being available and dependable when customers need us most, especially during entrapments or outages.
-            </p>
-          </div>
-          <div>
-            <h2 class="text-2xl font-semibold mb-2">Proactive Service</h2>
-            <p class="text-gray-700">
-              Identifying and resolving issues before they become problems, through preventative maintenance and honest assessments.
-            </p>
-          </div>
-          <div>
-            <h2 class="text-2xl font-semibold mb-2">Flexible, Creative Solutions</h2>
-            <p class="text-gray-700">
-              Adapting to unique customer needs, budgets, and timelines with customized, outside-the-box approaches.
-            </p>
-          </div>
-          <div>
-            <h2 class="text-2xl font-semibold mb-2">Fairness & Transparency</h2>
-            <p class="text-gray-700">
-              Providing clear pricing, honest recommendations, with accurate proposals and invoicing.
-            </p>
-          </div>
-          <div>
-            <h2 class="text-2xl font-semibold mb-2">Relationship-Driven Support</h2>
-            <p class="text-gray-700">
-              Acting as a true partner, not just a vendor — earning trust through integrity, responsiveness, and follow-through.
-            </p>
-          </div>
-        </section>
+    <!-- Services Grid (with descriptions and white text) -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto text-center mb-12 px-4">
+        <h2 class="text-3xl font-bold">Our Services</h2>
+        <p class="text-gray-600 mt-2">
+          Customized Maintenance, Repair, and Modernization solutions to keep you moving.
+        </p>
+      </div>
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
 
-        <!-- Services Overview -->
-        <section class="space-y-12">
-          <h2 class="text-3xl font-bold text-center">Our Services</h2>
-
-          <!-- Maintenance -->
-          <div class="bg-surface p-6 rounded-lg shadow-md">
-            <h3 class="text-2xl font-semibold mb-2">MAINTENANCE</h3>
-            <p class="text-gray-700 leading-relaxed mb-4">
-              Customized contracts focusing on safety, reliability, and code compliance. The goal is to reduce downtime, extend equipment life, and enhance safety.
+        <!-- Maintenance Card -->
+        <div
+          class="service-card relative z-0 rounded-lg shadow-lg overflow-hidden h-64"
+          style="background: url('images/maintenance.png') center/cover no-repeat;"
+        >
+          <div class="absolute inset-0 bg-black/70 z-10"></div>
+          <div class="relative z-20 p-6 flex flex-col h-full justify-end">
+            <h3 class="text-2xl font-semibold mb-2 text-white">Maintenance</h3>
+            <p class="text-white flex-1 mb-4">
+              Tailored plans to reduce downtime, extend elevator life, and ensure ASME code compliance.
             </p>
-            <ul class="list-disc list-inside text-gray-700 pl-4 space-y-2">
-              <li><strong>Tailored Maintenance Plans:</strong> Based on equipment type, usage, and environment.</li>
-              <li><strong>Compliance:</strong> Make sure you are compliant to ASME A17.1 Safety Code standards. Inspection violation management + corrections.</li>
-              <li><strong>Guaranteed Routine Service:</strong> Contracts specify number of visits per year. Cleaning, lubricating, and adjusting key components like doors, brakes, and ropes.</li>
-              <li><strong>Flexible Contracts:</strong> From basic ‘Oil &amp; Grease’ to comprehensive Full Maintenance, including emergency repairs.</li>
-              <li><strong>Common Repairs:</strong> Door systems are the most frequently serviced due to heavy use.</li>
-            </ul>
+            <a
+              href="services.html#maintenance"
+              class="inline-block text-white font-semibold hover:underline"
+            >
+              Learn More →
+            </a>
           </div>
+        </div>
 
-          <!-- Repair -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <h3 class="text-2xl font-semibold mb-2">REPAIR</h3>
-            <p class="text-gray-700 leading-relaxed mb-4">
-              Our approach emphasizes safety, fast response, and restoring full elevator functionality.
+        <!-- Repair Card -->
+        <div
+          class="service-card relative z-0 rounded-lg shadow-lg overflow-hidden h-64"
+          style="background: url('images/repair.png') center/cover no-repeat;"
+        >
+          <div class="absolute inset-0 bg-black/70 z-10"></div>
+          <div class="relative z-20 p-6 flex flex-col h-full justify-end">
+            <h3 class="text-2xl font-semibold mb-2 text-white">Repair</h3>
+            <p class="text-white flex-1 mb-4">
+              Fast, safe restoration of full elevator functionality—honest pricing and transparent scopes.
             </p>
-            <ul class="list-disc list-inside text-gray-700 pl-4 space-y-2">
-              <li><strong>Clear and Comprehensive Scope:</strong> Providing clear pricing, honest recommendations, with accurate proposals and invoicing.</li>
-              <li><strong>Flexible, Creative Solutions:</strong> Adapting to unique customer &amp; equipment needs. Fitting all budgets and timelines with customized, outside-the-box approaches.</li>
-              <li><strong>Importance of Maintenance:</strong> While maintenance reduces the need for major fixes, repair services are ready when breakdowns occur.</li>
-              <li><strong>Common Repairs:</strong> Doors are the most frequently repaired system – issues like door misalignment, sensor failures, and broken locks can cause elevator shutdowns.</li>
-            </ul>
+            <a
+              href="services.html#repair"
+              class="inline-block text-white font-semibold hover:underline"
+            >
+              Learn More →
+            </a>
           </div>
+        </div>
 
-          <!-- Modernization -->
-          <div class="bg-surface p-6 rounded-lg shadow-md">
-            <h3 class="text-2xl font-semibold mb-2">MODERNIZATION</h3>
-            <p class="text-gray-700 leading-relaxed mb-4">
-              Customized elevator modernization solutions to upgrade aging and obsolete systems for improved safety, reliability, and efficiency. Emphasizes tailored planning, experienced project management, and transparent service without unnecessary upselling.
+        <!-- Modernization Card -->
+        <div
+          class="service-card relative z-0 rounded-lg shadow-lg overflow-hidden h-64"
+          style="background: url('images/modernization.png') center/cover no-repeat;"
+        >
+          <div class="absolute inset-0 bg-black/70 z-10"></div>
+          <div class="relative z-20 p-6 flex flex-col h-full justify-end">
+            <h3 class="text-2xl font-semibold mb-2 text-white">Modernization</h3>
+            <p class="text-white flex-1 mb-4">
+              Upgrade aging systems for safety, efficiency, and ride comfort—phased or full projects.
             </p>
-            <div class="space-y-4">
-              <div>
-                <h4 class="font-semibold">What’s Included:</h4>
-                <p class="text-gray-700">Upgrades to controllers, door equipment, motors, safety systems, and cab interiors. Full or phased modernization based on budget and urgency.</p>
-              </div>
-              <div>
-                <h4 class="font-semibold">When to Modernize:</h4>
-                <p class="text-gray-700">Typical lifespan: 20–30 years depending on elevator type. Signs include frequent breakdowns, part availability issues, and extended downtimes.</p>
-              </div>
-              <div>
-                <h4 class="font-semibold">Key Benefits:</h4>
-                <ul class="list-disc list-inside text-gray-700 pl-4">
-                  <li>Increased safety and energy efficiency</li>
-                  <li>Fewer service calls and lower cost of ownership</li>
-                  <li>Enhanced ride comfort and property value</li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="font-semibold">Cost &amp; Timeline Factors:</h4>
-                <p class="text-gray-700">Varies by project scope, building type, number of stops, and regional labor rates. Duration ranges from 12 weeks to 6 months.</p>
-              </div>
-            </div>
+            <a
+              href="services.html#modernization"
+              class="inline-block text-white font-semibold hover:underline"
+            >
+              Learn More →
+            </a>
           </div>
-        </section>
+        </div>
 
       </div>
-    </main>
-    
+    </section>
+
+    <!-- Our Values Grid -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto text-center mb-12 px-4">
+    <h2 class="text-3xl font-bold">Our Values</h2>
+  </div>
+  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4">
+
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-semibold text-xl mb-1">Reliable Performance</h3>
+      <p class="text-gray-600">
+        Elevators that operate smoothly, safely, and consistently with minimal downtime.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-semibold text-xl mb-1">Clear Communication</h3>
+      <p class="text-gray-600">
+        Prompt, professional updates about service calls, repairs, violations, and scheduling — no surprises.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-semibold text-xl mb-1">Rapid Emergency Response</h3>
+      <p class="text-gray-600">
+        Being available and dependable when customers need us most, especially during entrapments or outages.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-semibold text-xl mb-1">Proactive Service</h3>
+      <p class="text-gray-600">
+        Identifying and resolving issues before they become problems, through preventative maintenance and honest assessments.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-semibold text-xl mb-1">Flexible, Creative Solutions</h3>
+      <p class="text-gray-600">
+        Adapting to unique customer needs, budgets, and timelines with customized, outside-the-box approaches.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-semibold text-xl mb-1">Fairness & Transparency</h3>
+      <p class="text-gray-600">
+        Providing clear pricing, honest recommendations, with accurate proposals and invoicing.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-semibold text-xl mb-1">Relationship-Driven Support</h3>
+      <p class="text-gray-600">
+        Acting as a true partner, not just a vendor — earning trust through integrity, responsiveness, and follow-through.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
     <!-- Survey Modal -->
     <div
       id="survey-modal"
@@ -207,7 +238,7 @@
         </form>
       </div>
     </div>
-    
+
     <!-- Floating Review Us Button (above) -->
     <button
       id="open-survey"

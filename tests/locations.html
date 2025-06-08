@@ -11,96 +11,108 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles/style.css" />
 </head>
-<body>
+<body class="relative">
 
   <!-- Header placeholder (injected by header-footer.js) -->
   <div id="site-header"></div>
 
-  <div class="site-wrapper">
-    <!-- Offset for fixed header (8rem) -->
-    <main role="main" class="pt-32 pb-16">
-      <div class="container mx-auto max-w-3xl space-y-12 px-4">
+  <div class="site-wrapper pt-32">
 
-        <!-- Page Title -->
-        <section class="text-center">
-          <h1 class="text-4xl font-bold mb-4">Service Areas &amp; Headquarters</h1>
-          <p class="text-gray-700 leading-relaxed">
-            Our regional offices and headquarters across North and South Carolina.
-          </p>
-        </section>
+    <main role="main" class="pb-16">
+
+      <!-- Region Cards Grid -->
+      <div class="max-w-5xl mx-auto px-4 grid gap-8 mt-8 grid-cols-1 md:grid-cols-2 odd:bg-white even:bg-surface">
 
         <!-- Headquarters -->
-        <section id="headquarters" class="bg-surface p-6 rounded-lg shadow-md">
-          <h2 class="text-3xl font-semibold mb-4">Headquarters</h2>
-          <p class="text-gray-700 mb-4">
+        <section
+          id="headquarters"
+          class="rounded-lg shadow-md p-6 transition transform hover:-translate-y-1 hover:shadow-lg"
+        >
+          <h2 class="text-2xl font-semibold mb-2">Headquarters</h2>
+          <p class="text-gray-800 mb-4">
             9751 Moose Rd., Unit #9<br />
             Murrells Inlet, SC 29576
           </p>
           <p class="text-gray-700">
-            <strong>Scott Gaskill, President/CEO</strong><br />
-            <strong>Tammy Black, Regional Office Director</strong>
+            <strong>Scott Gaskill</strong>, President/CEO<br />
+            <strong>Tammy Black</strong>, Regional Office Director
           </p>
         </section>
 
-        <!-- Charleston Office -->
-        <section id="charleston" class="bg-white p-6 rounded-lg shadow-md">
-          <h2 class="text-3xl font-semibold mb-4">Charleston</h2>
-          <p class="text-gray-700 mb-4">
+        <!-- Charleston -->
+        <section
+          id="charleston"
+          class="rounded-lg shadow-md p-6 transition transform hover:-translate-y-1 hover:shadow-lg"
+        >
+          <h2 class="text-2xl font-semibold mb-2">Charleston</h2>
+          <p class="text-gray-800 mb-4">
             1514 Mathis Ferry Rd. A109<br />
             Mount Pleasant, SC 29464
           </p>
           <p class="text-gray-700">
-            <strong>Ben Rabin, Regional General Manager</strong>
+            <strong>Ben Rabin</strong>, Regional General Manager
           </p>
         </section>
 
-        <!-- Raleigh / Durham Office -->
-        <section id="raleigh-durham" class="bg-surface p-6 rounded-lg shadow-md">
-          <h2 class="text-3xl font-semibold mb-4">Raleigh / Durham</h2>
-          <p class="text-gray-700 mb-4">
+        <!-- Raleigh / Durham -->
+        <section
+          id="raleigh-durham"
+          class="rounded-lg shadow-md p-6 transition transform hover:-translate-y-1 hover:shadow-lg"
+        >
+          <h2 class="text-2xl font-semibold mb-2">Raleigh / Durham</h2>
+          <p class="text-gray-800 mb-4">
             2019 Production Dr., Ste. 107<br />
             Apex, NC 27539
           </p>
           <p class="text-gray-700">
-            <strong>Keith Desmond, Sr-Director Operations</strong>
+            <strong>Keith Desmond</strong>, Sr-Director Operations
           </p>
         </section>
 
-        <!-- Wilmington Office -->
-        <section id="wilmington" class="bg-white p-6 rounded-lg shadow-md">
-          <h2 class="text-3xl font-semibold mb-4">Wilmington, NC</h2>
-          <p class="text-gray-700 mb-4">
+        <!-- Wilmington -->
+        <section
+          id="wilmington"
+          class="rounded-lg shadow-md p-6 transition transform hover:-translate-y-1 hover:shadow-lg"
+        >
+          <h2 class="text-2xl font-semibold mb-2">Wilmington</h2>
+          <p class="text-gray-800 mb-4">
             321 N Front St., Ste. 310<br />
             Wilmington, NC 28401
           </p>
           <p class="text-gray-700">
-            <strong>Ben Rabin, Regional General Manager</strong>
+            <strong>Ben Rabin</strong>, Regional General Manager
           </p>
         </section>
 
-        <!-- Columbia Office -->
-        <section id="columbia" class="bg-surface p-6 rounded-lg shadow-md">
-          <h2 class="text-3xl font-semibold mb-4">Columbia, SC</h2>
-          <p class="text-gray-700 mb-4">
+        <!-- Columbia -->
+        <section
+          id="columbia"
+          class="rounded-lg shadow-md p-6 transition transform hover:-translate-y-1 hover:shadow-lg"
+        >
+          <h2 class="text-2xl font-semibold mb-2">Columbia</h2>
+          <p class="text-gray-800 mb-4">
             401 Western Ln., Ste. 2<br />
             Irmo, SC 29063
           </p>
           <p class="text-gray-700">
-            <strong>Ben Rabin, Business Development Manager</strong><br />
-            <strong>Jordan Clemons, Lead Maintenance Technician</strong>
+            <strong>Ben Rabin</strong>, Business Development Manager<br />
+            <strong>Jordan Clemons</strong>, Lead Maintenance Technician
           </p>
         </section>
 
-        <!-- Myrtle Beach Office -->
-        <section id="myrtle-beach" class="bg-white p-6 rounded-lg shadow-md">
-          <h2 class="text-3xl font-semibold mb-4">Myrtle Beach</h2>
-          <p class="text-gray-700 mb-4">
-            9751 Moose Rd., Unit #6 and #9<br />
+        <!-- Myrtle Beach -->
+        <section
+          id="myrtle-beach"
+          class="rounded-lg shadow-md p-6 transition transform hover:-translate-y-1 hover:shadow-lg"
+        >
+          <h2 class="text-2xl font-semibold mb-2">Myrtle Beach</h2>
+          <p class="text-gray-800 mb-4">
+            9751 Moose Rd., Unit #6 & #9<br />
             Murrells Inlet, SC 29576
           </p>
           <p class="text-gray-700">
-            <strong>Ben Rabin, Regional General Manager</strong><br />
-            <strong>John DiCapua, Maintenance Lead</strong>
+            <strong>Ben Rabin</strong>, Regional General Manager<br />
+            <strong>John DiCapua</strong>, Maintenance Lead
           </p>
         </section>
 
@@ -132,7 +144,7 @@
       </div>
     </div>
 
-    <!-- Internal Feedback Modal -->
+    <!-- Feedback Modal -->
     <div
       id="feedback-modal"
       class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center"
@@ -173,7 +185,7 @@
         </form>
       </div>
     </div>
-    
+
     <!-- Floating Review Us Button (above) -->
     <button
       id="open-survey"
@@ -202,6 +214,7 @@
 
     <!-- Footer placeholder (injected by header-footer.js) -->
     <div id="site-footer"></div>
+
   </div> <!-- end .site-wrapper -->
 
   <!-- Required scripts -->

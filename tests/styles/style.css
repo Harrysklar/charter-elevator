@@ -95,6 +95,7 @@ input:focus, textarea:focus, select:focus {
 /* Smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
 }
 
 /* Floating call-now button */
@@ -124,3 +125,13 @@ html {
 .btn-secondary:hover {
   transform: scale(1.05);
 }
+
+.service-card {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+

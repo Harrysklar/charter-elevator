@@ -31,24 +31,26 @@
 
         <!-- Direct Contact Info -->
         <section id="contact-info" class="bg-surface p-6 rounded-lg shadow-md">
-          <h2 class="text-3xl font-semibold mb-4">Get in Touch</h2>
+          <h2 class="text-3xl font-semibold mb-4 border-b-2 border-green-400 pb-2">Get in Touch</h2>
           <p class="text-gray-700 mb-2">
-            <strong>Phone:</strong> <a href="tel:877-632-4278" class="hover:text-blue-600">877-632-4278</a> (24/7 Dispatch)
+            <strong>Phone:</strong>
+            <a href="tel:877-632-4278" class="hover:text-[#005587]">877-632-4278</a> (24/7 Dispatch)
           </p>
           <p class="text-gray-700 mb-2">
-            <strong>Email:</strong> <a href="mailto:info@charterelevator.com" class="hover:text-blue-600">info@charterelevator.com</a>
+            <strong>Email:</strong>
+            <a href="mailto:info@charterelevator.com" class="hover:text-[#005587]">info@charterelevator.com</a>
           </p>
           <p class="text-gray-700">
             <strong>Address:</strong><br />
-            9751 Moose Rd., Unit #9,<br />
+            9751 Moose Rd., Unit #9<br />
             Murrells Inlet, SC 29576
           </p>
         </section>
 
-        <!-- Contact Form -->
-        <section id="contact-form" class="bg-white p-6 rounded-lg shadow-md">
-          <h2 class="text-3xl font-semibold mb-4">Send Us a Message</h2>
-          <form class="space-y-4" aria-label="Contact form">
+        <!-- Contact Form (Card-Style Panel) -->
+        <section id="contact-form" class="bg-white p-8 rounded-xl shadow-lg">
+          <h2 class="text-3xl font-semibold mb-6 border-b-2 border-green-400 pb-2">Send Us a Message</h2>
+          <form class="space-y-6" aria-label="Contact form">
             <div>
               <label for="name" class="block text-gray-700 mb-1">Name</label>
               <input
@@ -56,9 +58,8 @@
                 id="name"
                 name="name"
                 required
-                class="w-full p-2 border rounded"
+                class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
                 placeholder="Your Name"
-                aria-label="Enter your name"
               />
             </div>
             <div>
@@ -68,9 +69,8 @@
                 id="email"
                 name="email"
                 required
-                class="w-full p-2 border rounded"
+                class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
                 placeholder="Your Email"
-                aria-label="Enter your email"
               />
             </div>
             <div>
@@ -79,9 +79,8 @@
                 type="tel"
                 id="phone"
                 name="phone"
-                class="w-full p-2 border rounded"
+                class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
                 placeholder="Your Phone Number"
-                aria-label="Enter your phone number"
               />
             </div>
             <div>
@@ -90,29 +89,28 @@
                 id="message"
                 name="message"
                 required
-                class="w-full p-2 border rounded"
+                class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
                 placeholder="How can we help?"
-                aria-label="Enter your message"
+                rows="5"
               ></textarea>
             </div>
             <button
               type="submit"
-              class="btn-primary w-full py-2 rounded text-white"
-              aria-label="Submit contact form"
-            >Submit</button>
+              class="w-full py-3 bg-[#005587] hover:bg-[#1E77AE] text-white font-semibold rounded-lg transition"
+            >
+              Submit
+            </button>
           </form>
         </section>
 
         <!-- Map Embed -->
         <section id="map" class="bg-surface p-6 rounded-lg shadow-md">
-          <h2 class="text-3xl font-semibold mb-4">Our Location</h2>
+          <h2 class="text-3xl font-semibold mb-4 border-b-2 border-green-400 pb-2">Our Location</h2>
           <div class="w-full aspect-w-16 aspect-h-9">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.1234567890123!2d-79.0000000000000!3d33.5000000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1234567890abcdef%3A0xabcdef1234567890!2s9751+Moose+Rd+%239%2C+Murrells+Inlet%2C+SC+29576!5e0!3m2!1sen!2sus!4v1234567890123"
-              width="600"
-              height="450"
-              style="border:0;"
-              allowfullscreen=""
+              class="w-full h-full border-0 rounded-lg"
+              allowfullscreen
               loading="lazy"
               title="Charter Elevator Headquarters Map"
             ></iframe>

@@ -21,52 +21,51 @@
       class="fixed top-0 left-0 right-0 z-50 bg-[var(--color-accent)] text-white w-full"
     >
 
-      <!-- ─── Option 1: Mobile Mini-Bar + Slide-Down Logo ───────────── -->
       <!-- ─── Option 1: Mobile Mini-Bar + Dropdown Nav ──────────── -->
-  <div class="md:hidden">
-    <!-- mini action bar -->
-    <div class="flex items-center justify-between h-11 px-3 bg-[var(--color-accent)]">
-      <!-- hamburger toggles dropdown -->
-      <button id="mob-hamburger" class="p-2 focus:outline-none text-white">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-
-      <!-- logo -->
-      <a href="index.html" class="block">
-        <img
-          src="https://charterelevator.com/wp-content/uploads/2022/09/logo-centered.png"
-          alt="Charter Elevator Logo"
-          class="h-8"
-        />
-      </a>
-
-      <!-- survey trigger -->
-      <button id="mob-survey" class="p-2 focus:outline-none text-white">
-        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 
-                   9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-        </svg>
-      </button>
-    </div>
-    <!-- dropdown panel -->
-    <nav id="mob-menu" class="hidden flex-col bg-[var(--color-accent)]">
-      <ul class="p-4 space-y-3">
-        <li><a href="index.html"     class="block text-white font-medium">About Us</a></li>
-        <li><a href="services.html"  class="block text-white font-medium">Services</a></li>
-        <li><a href="locations.html" class="block text-white font-medium">Locations</a></li>
-        <li><a href="contact.html"   class="block text-white font-medium">Contact Us</a></li>
-        <li>
-          <button id="mob-survey-2" class="w-full text-left text-white font-medium">
-            Leave Feedback
+      <div class="md:hidden">
+        <!-- mini action bar -->
+        <div class="flex items-center justify-between h-11 px-3 bg-[var(--color-accent)]">
+          <!-- hamburger toggles dropdown -->
+          <button id="mob-hamburger" class="p-2 focus:outline-none text-white">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
           </button>
-        </li>
-      </ul>
-    </nav>
-  </div>
 
+          <!-- logo -->
+          <a href="index.html" class="block">
+            <img
+              src="https://charterelevator.com/wp-content/uploads/2022/09/logo-centered.png"
+              alt="Charter Elevator Logo"
+              class="h-8"
+            />
+          </a>
+
+          <!-- survey trigger -->
+          <button id="mob-survey" class="p-2 focus:outline-none text-white">
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 
+                       9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+          </button>
+        </div>
+        <!-- dropdown panel -->
+        <nav id="mob-menu" class="hidden flex-col bg-[var(--color-accent)]">
+          <ul class="p-4 space-y-3">
+            <li><a href="index.html"     class="block text-white font-medium">About Us</a></li>
+            <li><a href="services.html"  class="block text-white font-medium">Services</a></li>
+            <li><a href="locations.html" class="block text-white font-medium">Locations</a></li>
+            <li><a href="contact.html"   class="block text-white font-medium">Contact Us</a></li>
+            <li>
+              <button id="mob-survey-2" class="w-full text-left text-white font-medium">
+                Leave Feedback
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
       <!-- ─── Desktop Two-Row Grid ────────────────────────────────────── -->
       <div class="container mx-auto grid grid-cols-12 grid-rows-2 h-32 hidden md:grid">
         <!-- Logo -->
@@ -126,10 +125,43 @@
   if (headerContainer) headerContainer.innerHTML = headerHTML;
 
   const footerHTML = `
-    <footer id="site-footer" class="bg-gray-800 text-white py-8">
-      <!-- …your footer… -->
-    </footer>
-  `;
+  <footer id="site-footer" class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+      <!-- Quick Links -->
+      <div>
+        <h4 class="font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-orange-500">About Us</a></li>
+          <li><a href="services.html" class="hover:text-orange-500">Services</a></li>
+          <li><a href="locations.html" class="hover:text-orange-500">Locations</a></li>
+          <li><a href="contact.html" class="hover:text-orange-500">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Headquarters -->
+      <div>
+        <h4 class="font-semibold mb-4">Our Headquarters</h4>
+        <p class="text-gray-200">
+          9751 Moose Rd., Unit #9<br />
+          Murrells Inlet, SC 29576
+        </p>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h4 class="font-semibold mb-4">Contact</h4>
+        <p class="text-gray-200">
+          Phone: <a href="tel:877-632-4278" class="hover:text-orange-500">877-632-4278</a><br />
+          Email: <a href="mailto:info@charterelevator.com" class="hover:text-orange-500">info@charterelevator.com</a>
+        </p>
+      </div>
+    </div>
+    <div class="mt-8 text-center text-sm text-gray-500">
+      © 2025 Charter Elevator. All Rights Reserved.
+    </div>
+  </footer>
+`;
+
   const footerContainer = document.getElementById('site-footer');
   if (footerContainer) footerContainer.innerHTML = footerHTML;
 

@@ -18,68 +18,71 @@
   const headerHTML = `
   <header
     role="banner"
-    class="fixed top-0 left-0 right-0 z-50 bg-[var(--color-accent)] text-white h-32"
+    class="
+      fixed top-0 left-0 right-0 z-50
+      bg-darkgray text-white
+      h-auto py-4 px-4
+      md:h-32 md:py-0 md:px-0
+      flex flex-col md:grid
+      md:grid-cols-12 md:grid-rows-2
+      items-center
+    "
   >
-    <div class="container mx-auto grid grid-cols-12 grid-rows-2 h-full">
+    <!-- Logo -->
+    <div class="flex items-center mb-4 md:mb-0 md:col-span-3 md:row-span-2">
+      <a href="index.html">
+        <img
+          src="https://charterelevator.com/wp-content/uploads/2022/09/logo-centered.png"
+          alt="Company Logo"
+          class="h-12 md:h-full w-auto"
+        />
+      </a>
+    </div>
 
-      <!-- Logo -->
-      <div class="col-span-3 row-span-2 flex items-center">
-        <a href="index.html" class="block">
-          <img
-            src="https://charterelevator.com/wp-content/uploads/2022/09/logo-centered.png"
-            alt="Company Logo"
-            class="h-full w-auto"
-          />
-        </a>
-      </div>
+    <!-- Top-right contact (under logo on mobile) -->
+    <div class="flex flex-col items-center mb-4 md:mb-0 md:col-span-9 md:row-span-1 md:justify-end md:pr-4">
+      <div class="text-sm font-semibold">Available 24/7 for Emergencies!</div>
+      <a
+        href="tel:877-632-4278"
+        class="font-bold text-lg md:text-xl underline"
+      >877-632-4278</a>
+    </div>
 
-      <!-- Top-right contact -->
-      <div class="col-span-9 row-span-1 flex justify-end items-center pr-4">
-        <div class="flex flex-col items-center">
-          <div class="text-sm font-semibold">Available 24/7 for Emergencies!</div>
-          <a
-            href="tel:877-632-4278"
-            class="font-bold text-xl underline text-white"
-          >877-632-4278</a>
-        </div>
-      </div>
+    <!-- Nav -->
+    <nav
+      role="navigation"
+      aria-label="Primary"
+      class="w-full md:col-span-9 md:row-span-1 flex items-center justify-between"
+    >
+      <!-- Mobile hamburger -->
+      <button id="nav-toggle" class="md:hidden text-white focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
 
-      <!-- Nav -->
-      <nav
-        role="navigation"
-        aria-label="Primary"
-        class="col-span-9 row-span-1 flex items-center"
-      >
-        <!-- Mobile hamburger -->
-        <button id="nav-toggle" class="md:hidden focus:outline-none px-4">
-          <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+      <!-- Desktop links (hidden mobile) -->
+      <ul id="nav-links" class="hidden md:flex flex-1 justify-evenly font-medium">
+        <li><a href="index.html"      class="nav-link text-white hover:text-[var(--color-cta)]">About Us</a></li>
+        <li><a href="services.html"   class="nav-link text-white hover:text-[var(--color-cta)]">Services</a></li>
+        <li><a href="locations.html"  class="nav-link text-white hover:text-[var(--color-cta)]">Locations</a></li>
+        <li><a href="contact.html"    class="nav-link text-white hover:text-[var(--color-cta)]">Contact Us</a></li>
+      </ul>
+    </nav>
 
-        <!-- Desktop links -->
-        <ul id="nav-links" class="hidden md:flex flex-1 justify-evenly font-medium">
-          <li><a href="index.html"      class="nav-link text-white hover:text-[var(--color-cta)]">About Us</a></li>
-          <li><a href="services.html"   class="nav-link text-white hover:text-[var(--color-cta)]">Services</a></li>
-          <li><a href="locations.html"  class="nav-link text-white hover:text-[var(--color-cta)]">Locations</a></li>
-          <li><a href="contact.html"    class="nav-link text-white hover:text-[var(--color-cta)]">Contact Us</a></li>
-        </ul>
-      </nav>
-
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="md:hidden hidden col-span-12 bg-[var(--color-accent)]">
-        <ul class="flex flex-col space-y-2 p-4">
-          <li><a href="index.html"     class="nav-link text-white hover:text-[var(--color-cta)]">About Us</a></li>
-          <li><a href="services.html"  class="nav-link text-white hover:text-[var(--color-cta)]">Services</a></li>
-          <li><a href="locations.html" class="nav-link text-white hover:text-[var(--color-cta)]">Locations</a></li>
-          <li><a href="contact.html"   class="nav-link text-white hover:text-[var(--color-cta)]">Contact Us</a></li>
-        </ul>
-      </div>
-
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden w-full bg-darkgray mt-4">
+      <ul class="flex flex-col space-y-2 p-4">
+        <li><a href="index.html"     class="nav-link text-white hover:text-[var(--color-cta)]">About Us</a></li>
+        <li><a href="services.html"  class="nav-link text-white hover:text-[var(--color-cta)]">Services</a></li>
+        <li><a href="locations.html" class="nav-link text-white hover:text-[var(--color-cta)]">Locations</a></li>
+        <li><a href="contact.html"   class="nav-link text-white hover:text-[var(--color-cta)]">Contact Us</a></li>
+      </ul>
     </div>
   </header>
 `;
+
 
 
   // 3) Inject updated footer

@@ -1,4 +1,3 @@
-<!-- location.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,106 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Charter Elevator • Locations</title>
 
+  <!-- 1) Define brand colors -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              coolgray1: '#D9D8D6', /* Pantone Cool Gray 1 C */
+              brandgreen: '#59796D', /* Pantone 5555 C */
+              darkgray: '#2C2E2F', /* Pantone 426 C */
+              darkgreen: '#1F2A23', /* Pantone 5605 C */
+            }
+          }
+        }
+      }
+    </script>
+
   <!-- Tailwind CDN loader -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles/style.css" />
 </head>
-<body>
+<body class="relative">
 
-  <!-- Header placeholder (injected by header-footer.js) -->
+  <!-- Header placeholder -->
   <div id="site-header"></div>
 
-  <div class="site-wrapper">
-    <!-- Offset for fixed header (8rem) -->
-    <main role="main" class="pt-32 pb-16">
-      <div class="container mx-auto max-w-3xl space-y-12 px-4">
+  <div class="site-wrapper pt-32">
+  <main role="main" class="pb-16">
 
-        <!-- Page Title -->
-        <section class="text-center">
-          <h1 class="text-4xl font-bold mb-4">Service Areas &amp; Headquarters</h1>
-          <p class="text-gray-700 leading-relaxed">
-            Our regional offices and headquarters across North and South Carolina.
-          </p>
-        </section>
+  <!-- Office Locations Map Card with Pins -->
+  <section class="py-12 bg-[var(--color-bg-primary)]">
+    <div class="container mx-auto px-4">
+      <!-- full-width relative wrapper -->
+      <div class="relative overflow-hidden rounded-lg shadow-lg w-full lg:max-w-4xl lg:mx-auto">
+        <!-- Base map image -->
+        <img
+          src="images/map.jpg"
+          alt="Map of North & South Carolina service areas"
+          class="w-full h-auto object-cover"
+        />
 
-        <!-- Headquarters -->
-        <section id="headquarters" class="bg-surface p-6 rounded-lg shadow-md">
-          <h2 class="text-3xl font-semibold mb-4">Headquarters</h2>
-          <p class="text-gray-700 mb-4">
+        <!-- Pins overlay -->
+        <div class="absolute top-[30%] left-[43%]">
+          <svg class="w-6 h-6 text-brandgreen transform transition-transform duration-200 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+          </svg>
+        </div>
+        <div class="absolute top-[19%] left-[58%]">
+          <svg class="w-6 h-6 text-brandgreen transform transition-transform duration-200 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+          </svg>
+        </div>
+        <div class="absolute top-[39%] left-[70%]">
+          <svg class="w-6 h-6 text-brandgreen transform transition-transform duration-200 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+          </svg>
+        </div>
+        <div class="absolute top-[59%] left-[55%]">
+          <svg class="w-6 h-6 text-brandgreen transform transition-transform duration-200 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+          </svg>
+        </div>
+        <div class="absolute top-[69%] left-[47%]">
+          <svg class="w-6 h-6 text-brandgreen transform transition-transform duration-200 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+          </svg>
+        </div>
+        <div class="absolute top-[50%] left-[35%]">
+          <svg class="w-6 h-6 text-brandgreen transform transition-transform duration-200 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+          </svg>
+        </div>
+
+      </div>
+
+      <!-- Office list centered & spaced -->
+          <div class="mt-8 mx-auto max-w-4xl px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+              <div class="space-y-4 mx-auto max-w-xs transform transition-transform duration-200 hover:scale-105 cursor-pointer">
+                <h2 class="text-3xl font-bold text-[var(--color-text-primary)] section-title">North Carolina Offices</h2>
+                <ul class="list-disc list-inside text-left">
+                  <li>Charlotte</li>
+                  <li>Raleigh</li>
+                  <li>Wilmington</li>
+                </ul>
+              </div>
+              <div class="space-y-4 mx-auto max-w-xs transform transition-transform duration-200 hover:scale-105 cursor-pointer">
+                <h2 class="text-3xl font-bold text-[var(--color-text-primary)] section-title">South Carolina Offices</h2>
+                <ul class="list-disc list-inside text-left">
+                  <li>Charleston</li>
+                  <li>Myrtle Beach</li>
+                  <li>Columbia</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  <!-- Corporate HQ, centered & 90% width on desktop -->
+      <div class="w-full lg:w-[90%] mx-auto px-4 mt-8">
+        <section
+          id="headquarters"
+          class="rounded-lg shadow-md p-6 transition transform hover:-translate-y-1 hover:shadow-lg bg-gray-50"
+        >
+          <h2 class="text-2xl font-semibold mb-2 text-[var(--color-text-primary)]">
+            Corporate Headquarters
+          </h2>
+          <p class="text-[var(--color-text-primary)]">
             9751 Moose Rd., Unit #9<br />
             Murrells Inlet, SC 29576
           </p>
-          <p class="text-gray-700">
-            <strong>Scott Gaskill, President/CEO</strong><br />
-            <strong>Tammy Black, Regional Office Director</strong>
-          </p>
         </section>
 
-        <!-- Charleston Office -->
-        <section id="charleston" class="bg-white p-6 rounded-lg shadow-md">
-          <h2 class="text-3xl font-semibold mb-4">Charleston</h2>
-          <p class="text-gray-700 mb-4">
-            1514 Mathis Ferry Rd. A109<br />
-            Mount Pleasant, SC 29464
-          </p>
-          <p class="text-gray-700">
-            <strong>Ben Rabin, Regional General Manager</strong>
-          </p>
-        </section>
+    <!-- hidden addresses for SEO -->
+    <div class="sr-only">
+      <section id="charleston"><p>1514 Mathis Ferry Rd. A109, Mount Pleasant, SC 29464</p></section>
+      <section id="raleigh-durham"><p>2019 Production Dr., Ste. 107, Apex, NC 27539</p></section>
+      <section id="wilmington"><p>321 N Front St., Ste. 310, Wilmington, NC 28401</p></section>
+      <section id="myrtle-beach"><p>9751 Moose Rd., Unit #6 & #9, Murrells Inlet, SC 29576</p></section>
+    </div>
+  </div>
 
-        <!-- Raleigh / Durham Office -->
-        <section id="raleigh-durham" class="bg-surface p-6 rounded-lg shadow-md">
-          <h2 class="text-3xl font-semibold mb-4">Raleigh / Durham</h2>
-          <p class="text-gray-700 mb-4">
-            2019 Production Dr., Ste. 107<br />
-            Apex, NC 27539
-          </p>
-          <p class="text-gray-700">
-            <strong>Keith Desmond, Sr-Director Operations</strong>
-          </p>
-        </section>
-
-        <!-- Wilmington Office -->
-        <section id="wilmington" class="bg-white p-6 rounded-lg shadow-md">
-          <h2 class="text-3xl font-semibold mb-4">Wilmington, NC</h2>
-          <p class="text-gray-700 mb-4">
-            321 N Front St., Ste. 310<br />
-            Wilmington, NC 28401
-          </p>
-          <p class="text-gray-700">
-            <strong>Ben Rabin, Regional General Manager</strong>
-          </p>
-        </section>
-
-        <!-- Columbia Office -->
-        <section id="columbia" class="bg-surface p-6 rounded-lg shadow-md">
-          <h2 class="text-3xl font-semibold mb-4">Columbia, SC</h2>
-          <p class="text-gray-700 mb-4">
-            401 Western Ln., Ste. 2<br />
-            Irmo, SC 29063
-          </p>
-          <p class="text-gray-700">
-            <strong>Ben Rabin, Business Development Manager</strong><br />
-            <strong>Jordan Clemons, Lead Maintenance Technician</strong>
-          </p>
-        </section>
-
-        <!-- Myrtle Beach Office -->
-        <section id="myrtle-beach" class="bg-white p-6 rounded-lg shadow-md">
-          <h2 class="text-3xl font-semibold mb-4">Myrtle Beach</h2>
-          <p class="text-gray-700 mb-4">
-            9751 Moose Rd., Unit #6 and #9<br />
-            Murrells Inlet, SC 29576
-          </p>
-          <p class="text-gray-700">
-            <strong>Ben Rabin, Regional General Manager</strong><br />
-            <strong>John DiCapua, Maintenance Lead</strong>
-          </p>
-        </section>
-
-      </div>
-    </main>
+</main>
+  
 
     <!-- Survey Modal -->
     <div
@@ -132,7 +156,7 @@
       </div>
     </div>
 
-    <!-- Internal Feedback Modal -->
+    <!-- Feedback Modal -->
     <div
       id="feedback-modal"
       class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center"
@@ -173,7 +197,7 @@
         </form>
       </div>
     </div>
-    
+
     <!-- Floating Review Us Button (above) -->
     <button
       id="open-survey"
@@ -184,21 +208,24 @@
     </button>
 
     <!-- Floating Call-Now Button (below) -->
-    <a
-      href="tel:877-632-4278"
-      class="fixed bottom-8 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 flex items-center shadow-lg"
-      aria-label="Emergency service 24/7 — Call 877-632-4278"
-    >
-      <img
-        src="images/white_phone_transparent.png"
-        alt="Emergency Call Icon"
-        class="h-8 w-8 flex-shrink-0"
-      />
-      <div class="flex flex-col ml-4">
-        <span class="text-[11px] uppercase font-medium leading-none">Emergency 24/7 Dispatch</span>
-        <span class="text-lg font-bold leading-none">Call: 877-632-4278</span>
-      </div>
-    </a>
+      <a
+        href="tel:877-632-4278"
+        class="font-sans fixed bottom-8 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 flex items-center shadow-lg"
+        aria-label="Emergency service 24/7 — Call 877-632-4278"
+      >
+        <img
+          src="images/white_phone_transparent.png"
+          alt="Emergency Call Icon"
+          class="h-8 w-8 flex-shrink-0" />
+        <div class="flex flex-col ml-4">
+          <span class="text-lg font-bold leading-none">
+            Call: 877-632-4278
+          </span>
+          <span class="text-[11px] uppercase font-medium leading-none mt-1">
+            Available for emergency's 24/7
+          </span>
+        </div>
+      </a>
 
     <!-- Footer placeholder (injected by header-footer.js) -->
     <div id="site-footer"></div>

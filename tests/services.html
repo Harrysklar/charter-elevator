@@ -6,6 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Charter Elevator • Services</title>
 
+  <!-- 1) Define brand colors -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              coolgray1: '#D9D8D6', /* Pantone Cool Gray 1 C */
+              brandgreen: '#59796D', /* Pantone 5555 C */
+              darkgray: '#2C2E2F', /* Pantone 426 C */
+              darkgreen: '#1F2A23', /* Pantone 5605 C */
+            }
+          }
+        }
+      }
+    </script>
+
   <!-- Tailwind CDN loader -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Custom CSS -->
@@ -30,7 +46,7 @@
       </section>
 
       <!-- Maintenance -->
-      <section id="maintenance" class="py-16 bg-surface">
+      <section id="maintenance" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4 max-w-3xl">
           <div
             class="fade-in opacity-0 translate-y-6 transition-all duration-700 ease-out
@@ -83,7 +99,7 @@
       </section>
 
       <!-- Modernization -->
-      <section id="modernization" class="py-16 bg-surface">
+      <section id="modernization" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4 max-w-3xl">
           <div
             class="fade-in opacity-0 translate-y-6 transition-all duration-700 ease-out
@@ -143,10 +159,14 @@
     </script>
 
     <!-- Sticky CTA Bar -->
-    <div class="fixed bottom-0 left-0 right-0 bg-green-100 text-green-800 shadow-t py-3 z-50">
-      <div class="container mx-auto px-4 max-w-3xl flex justify-between items-center">
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-green-100 text-green-800 shadow-t py-3 z-50"
+    >
+      <div
+        class="container mx-auto px-4 max-w-3xl flex items-center"
+      >
         <span class="font-medium">Ready to get started?</span>
-        <a href="contact.html" class="font-semibold underline">
+        <a href="contact.html" class="font-semibold underline ml-2 text-red-600 hover:text-red-800">
           Contact us for a quote
         </a>
       </div>
@@ -201,21 +221,24 @@
     </button>
 
     <!-- Floating Call-Now Button (below) -->
-    <a
-      href="tel:877-632-4278"
-      class="fixed bottom-8 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 flex items-center shadow-lg"
-      aria-label="Emergency service 24/7 — Call 877-632-4278"
-    >
-      <img
-        src="images/white_phone_transparent.png"
-        alt="Emergency Call Icon"
-        class="h-8 w-8 flex-shrink-0"
-      />
-      <div class="flex flex-col ml-4">
-        <span class="text-[11px] uppercase font-medium leading-none">Emergency 24/7 Dispatch</span>
-        <span class="text-lg font-bold leading-none">Call: 877-632-4278</span>
-      </div>
-    </a>
+      <a
+        href="tel:877-632-4278"
+        class="font-sans fixed bottom-8 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 flex items-center shadow-lg"
+        aria-label="Emergency service 24/7 — Call 877-632-4278"
+      >
+        <img
+          src="images/white_phone_transparent.png"
+          alt="Emergency Call Icon"
+          class="h-8 w-8 flex-shrink-0" />
+        <div class="flex flex-col ml-4">
+          <span class="text-lg font-bold leading-none">
+            Call: 877-632-4278
+          </span>
+          <span class="text-[11px] uppercase font-medium leading-none mt-1">
+            Available for emergency's 24/7
+          </span>
+        </div>
+      </a>
 
     <!-- Footer placeholder (injected by header-footer.js) -->
     <div id="site-footer"></div>

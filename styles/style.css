@@ -1,110 +1,110 @@
 /* styles/style.css */
 
-/* Always reserve scrollbar space so pages don’t “jump” */
-html {
-  overflow-y: scroll;
-}
-
-/* Charter color palette */
+/* 1) Brand color variables */
 :root {
-  --color-primary: #005587;
-  --color-primary-light: #1E77AE;
-  --color-secondary: #F29300;
-  --color-bg: #ECFDF5;       /* pale green background */
-  --color-surface: #F5F7FA;
-  --color-text: #1F2A37;
-  --color-muted: #637381;
+  --color-bg-primary:   #ffffff;   /* primary page background */
+  --color-bg-secondary: #D9D8D6;   /* coolgray1, secondary panels */
+  --color-text-primary: #2C2E2F;   /* darkgray */
+  --color-accent:       #59796D;   /* brandgreen */
+  --color-accent-dark:  #1F2A23;   /* darkgreen */
+  --color-cta:          #F29300;   /* secondary CTA color */
+  --color-surface:      #F5F7FA;   /* light surface */
+  --color-muted:        #637381;   /* muted text */
 }
 
-/* Base styles */
+/* 2) Base styles */
+html {
+  overflow-y: scroll;       /* reserve scrollbar */
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
   line-height: 1.6;
 }
 
-/* Make .site-wrapper a flex column that fills the viewport minus the fixed header */
+/* 3) Site-wrapper & layout helpers */
 .site-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 4rem); /* 4rem equals the header’s height */
+  min-height: calc(100vh - 4rem); /* account for fixed header */
+  background-color: var(--color-bg-primary);
 }
 
-/* Push the footer placeholder to the bottom */
 #site-footer {
   margin-top: auto;
 }
 
-/* Headings */
+/* 4) Typography */
 h1, h2, h3 {
-  color: var(--color-text);
+  color: var(--color-text-primary);
 }
 
-/* Links */
+/* 5) Links */
 a {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 a:hover {
-  color: var(--color-primary-light);
+  color: var(--color-cta);
 }
 
-/* Buttons */
+/* 6) Buttons */
 .btn-primary {
-  background-color: var(--color-secondary);
+  background-color: var(--color-cta);
   color: #fff;
   border-radius: 0.5rem;
   padding: 0.75rem 1.5rem;
-  transition: background-color 0.2s;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 .btn-primary:hover {
   background-color: #d67e00;
+  transform: scale(1.05);
 }
 
 .btn-secondary {
   background-color: var(--color-surface);
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
   border-radius: 0.5rem;
   padding: 0.75rem 1.5rem;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 .btn-secondary:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
   color: #fff;
+  transform: scale(1.05);
 }
 
-/* Inputs & forms */
+/* 7) Form elements */
 input, textarea, select {
   border: 1px solid var(--color-muted);
   background-color: #fff;
-  color: var(--color-text);
+  color: var(--color-text-primary);
 }
 input:focus, textarea:focus, select:focus {
-  border-color: var(--color-primary);
+  border-color: var(--color-accent);
   outline: none;
-  box-shadow: 0 0 0 2px rgba(0, 85, 135, 0.2);
+  box-shadow: 0 0 0 2px rgba(89, 121, 109, 0.2); /* brandgreen @ 20% */
 }
 
-/* Section backgrounds */
+/* 8) Section backgrounds */
 #services, #about {
   background-color: var(--color-surface);
 }
 
-/* Active-link utility */
+/* 9) Utility */
 .text-secondary {
-  color: var(--color-secondary);
+  color: var(--color-cta);
 }
 
-/* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Floating call-now button */
+/* 10) Floating call-now */
 .btn-call {
   position: fixed;
   bottom: 2rem;
   left: 1rem;
-  background-color: var(--color-secondary);
+  background-color: var(--color-cta);
   color: #fff;
   border-radius: 9999px;
   padding: 0.5rem 1rem;
@@ -117,12 +117,29 @@ html {
   background-color: #d67e00;
 }
 
-/* Subtle animations on primary/secondary buttons */
-.btn-primary,
-.btn-secondary {
-  transition: transform 0.2s ease, background-color 0.2s ease;
+/* 11) Service cards hover */
+.service-card {
+  transition: transform 200ms ease, box-shadow 200ms ease;
 }
-.btn-primary:hover,
-.btn-secondary:hover {
-  transform: scale(1.05);
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
+
+/* full-width bright-green underline under every h2.section-title */
+.section-title {
+  display: block;            /* so width:100% applies */
+  padding-bottom: 0.5rem;    /* space for the underline */
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;               /* same as border-b-2 */
+  width: 100%;               /* full width of the h2 block */
+  background-color: #68D391; /* Tailwind green-400 */
+}
+

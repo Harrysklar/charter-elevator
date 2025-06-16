@@ -1,277 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Charter Elevator • Home</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charter Elevator • Home</title>
 
-  <!-- Tailwind CDN loader -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles/style.css" />
-</head>
-<body>
+    <!-- 1) Define brand colors -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              coolgray1: '#D9D8D6', /* Pantone Cool Gray 1 C */
+              brandgreen: '#59796D', /* Pantone 5555 C */
+              darkgray: '#2C2E2F', /* Pantone 426 C */
+              darkgreen: '#1F2A23', /* Pantone 5605 C */
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Tailwind CDN loader -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!-- Header placeholder (injected by header-footer.js) -->
+    <div id="site-header"></div>
 
-  <!-- Header placeholder (injected by header-footer.js) -->
-  <div id="site-header"></div>
+    <div class="site-wrapper">
+      <!-- Hero Section -->
+      <section
+        class="relative h-screen bg-cover bg-center flex items-center justify-center"
+        style="background-image: url('images/hero.png')"
+      >
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative text-center px-4">
+          <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+            Reliable Elevator Service, 24/7
+          </h1>
+          <p class="text-lg md:text-xl text-white mb-6 max-w-2xl mx-auto">
+            Charter Elevator brings innovative, high-quality solutions you can
+            trust.
+          </p>
+          <a
+            href="contact.html"
+            class="inline-block bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-6 py-3 font-semibold transition"
+          >
+            Get Started
+          </a>
+        </div>
+      </section>
 
-  <div class="site-wrapper">
-
-    <!-- Hero Section -->
-    <section
-      class="relative h-screen bg-cover bg-center flex items-center justify-center"
-      style="background-image: url('images/hero.png')"
-    >
-      <div class="absolute inset-0 bg-black/50"></div>
-      <div class="relative text-center px-4">
-        <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
-          Reliable Elevator Service, 24/7
-        </h1>
-        <p class="text-lg md:text-xl text-white mb-6 max-w-2xl mx-auto">
-          Charter Elevator brings innovative, high-quality solutions you can trust.
-        </p>
-        <a
-          href="contact.html"
-          class="inline-block bg-[#005587] hover:bg-[#1E77AE] text-white rounded-full px-6 py-3 font-semibold"
-        >
-          Get Started
-        </a>
+      <!-- Hero Card (condensed on mobile, full on desktop, capped on lg+) -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 items-stretch rounded-lg shadow-lg overflow-hidden">
+      
+      <!-- Left: image; full height up through md, max-height 75vh on lg+ -->
+      <div class="h-full lg:max-h-[75vh] overflow-hidden">
+        <img
+          src="images/hero.png"
+          alt="Charter Elevator technician at work"
+          class="w-full h-full object-cover"
+        />
       </div>
-    </section>
 
-    <!-- Services Grid (with descriptions and white text) -->
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto text-center mb-12 px-4">
-        <h2 class="text-3xl font-bold">Our Services</h2>
-        <p class="text-gray-600 mt-2">
-          Customized Maintenance, Repair, and Modernization solutions to keep you moving.
-        </p>
+      <!-- Right: responsive text -->
+      <div class="bg-white">
+        <!-- Mobile: condensed text -->
+        <div class="p-6 flex flex-col justify-center space-y-4 block md:hidden h-full">
+          <h2 class="text-2xl font-bold text-darkgray">
+            Part of Our Long-Term Partner Community
+          </h2>
+          <div class="w-12 h-1 bg-brandgreen"></div>
+          <p class="text-sm text-gray-700 leading-relaxed">
+            Founded by industry vets to bring reliable, high-quality elevator service at the lowest market price—and empower our team to innovate for you.
+          </p>
+          <p class="text-sm text-gray-700 leading-relaxed">
+            Introducing Charter View—an online dashboard for project transparency—and our aesthetic maintenance program to keep your elevators safe and looking sharp.
+          </p>
+          <p class="text-sm text-gray-700 leading-relaxed">
+            We service commercial & residential elevators with custom solutions for any budget.
+          </p>
+        </div>
+
+        <!-- Desktop: full text -->
+        <div class="p-8 flex flex-col justify-center space-y-4 hidden md:flex h-full">
+          <h2 class="text-3xl font-bold text-darkgray section-title">
+            With Charter Elevator, you’re not just another contract but an essential part of our community of long-term partners.
+          </h2>
+          <div class="w-16 h-1 bg-brandgreen"></div>
+          <p class="text-base text-gray-700 leading-relaxed">
+            Charter Elevator Company was established by several seasoned elevator industry executives with a mission to bring reliable service quality back to the elevator industry. As a result of this philosophy, Charter Elevator provides innovative, high quality elevator service solutions at the lowest market price. The company was also founded on the principle that Charter employees are empowered to make the innovative decisions necessary to please our customers.
+          </p>
+          <p class="text-base text-gray-700 leading-relaxed">
+            Charter Elevator brings a fresh approach to traditional elevator maintenance and modernization products. We are introducing Charter View, an online system that allows customers and employees to observe projects and visually monitor maintenance activities. We also believe that maintenance goes beyond elevator performance, and we have created an aesthetic maintenance approach to help customers manage costs, while keeping elevator aesthetics current.
+          </p>
+          <p class="text-base text-gray-700 leading-relaxed">
+            As an independent elevator company, Charter Elevator services both commercial and residential elevators, and we provide custom solutions within any customer budget.
+          </p>
+        </div>
       </div>
-      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
 
-        <!-- Maintenance Card -->
-        <div
-          class="service-card relative z-0 rounded-lg shadow-lg overflow-hidden h-64"
-          style="background: url('images/maintenance.png') center/cover no-repeat;"
-        >
-          <div class="absolute inset-0 bg-black/70 z-10"></div>
-          <div class="relative z-20 p-6 flex flex-col h-full justify-end">
-            <h3 class="text-2xl font-semibold mb-2 text-white">Maintenance</h3>
-            <p class="text-white flex-1 mb-4">
-              Tailored plans to reduce downtime, extend elevator life, and ensure ASME code compliance.
-            </p>
+    </div>
+  </div>
+</section>
+
+      <!-- Services Grid (with descriptions and white text) -->
+      <section class="py-16 bg-gray-50">
+        <div class="container mx-auto text-center mb-12 px-4">
+          <h2 class="text-3xl font-bold text-darkgray section-title">Our Services</h2>
+          <p class="text-gray-600 mt-2">
+            Customized Maintenance, Repair, and Modernization solutions to keep
+            you moving.
+          </p>
+        </div>
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+          <!-- Maintenance Card -->
+          <div
+            class="service-card relative z-0 rounded-lg shadow-lg overflow-hidden h-64"
+            style="background: url('images/maintenance.png') center/cover no-repeat;"
+          >
+            <!-- Invisible full-card link -->
             <a
               href="services.html#maintenance"
-              class="inline-block text-white font-semibold hover:underline"
-            >
-              Learn More →
-            </a>
-          </div>
-        </div>
+              class="absolute inset-0 z-30"
+              aria-label="Maintenance – Learn more"
+            ></a>
 
-        <!-- Repair Card -->
-        <div
-          class="service-card relative z-0 rounded-lg shadow-lg overflow-hidden h-64"
-          style="background: url('images/repair.png') center/cover no-repeat;"
-        >
-          <div class="absolute inset-0 bg-black/70 z-10"></div>
-          <div class="relative z-20 p-6 flex flex-col h-full justify-end">
-            <h3 class="text-2xl font-semibold mb-2 text-white">Repair</h3>
-            <p class="text-white flex-1 mb-4">
-              Fast, safe restoration of full elevator functionality—honest pricing and transparent scopes.
-            </p>
+            <div class="absolute inset-0 bg-black/70 z-10"></div>
+            <div class="relative z-20 p-6 flex flex-col h-full justify-end">
+              <h3 class="text-2xl font-semibold mb-2 text-white">Maintenance</h3>
+              <p class="text-white flex-1 mb-4">
+                Tailored plans to reduce downtime, extend elevator life, and
+                ensure ASME code compliance.
+              </p>
+              <a
+                href="services.html#maintenance"
+                class="inline-block text-white font-semibold hover:underline"
+              >
+                Learn More →
+              </a>
+            </div>
+          </div>
+
+          <!-- Repair Card -->
+          <div
+            class="service-card relative z-0 rounded-lg shadow-lg overflow-hidden h-64"
+            style="background: url('images/repair.png') center/cover no-repeat;"
+          >
+            <!-- Invisible full-card link -->
             <a
               href="services.html#repair"
-              class="inline-block text-white font-semibold hover:underline"
-            >
-              Learn More →
-            </a>
-          </div>
-        </div>
+              class="absolute inset-0 z-30"
+              aria-label="Repair – Learn more"
+            ></a>
 
-        <!-- Modernization Card -->
-        <div
-          class="service-card relative z-0 rounded-lg shadow-lg overflow-hidden h-64"
-          style="background: url('images/modernization.png') center/cover no-repeat;"
-        >
-          <div class="absolute inset-0 bg-black/70 z-10"></div>
-          <div class="relative z-20 p-6 flex flex-col h-full justify-end">
-            <h3 class="text-2xl font-semibold mb-2 text-white">Modernization</h3>
-            <p class="text-white flex-1 mb-4">
-              Upgrade aging systems for safety, efficiency, and ride comfort—phased or full projects.
-            </p>
+            <div class="absolute inset-0 bg-black/70 z-10"></div>
+            <div class="relative z-20 p-6 flex flex-col h-full justify-end">
+              <h3 class="text-2xl font-semibold mb-2 text-white">Repair</h3>
+              <p class="text-white flex-1 mb-4">
+                Fast, safe restoration of full elevator functionality—honest
+                pricing and transparent scopes.
+              </p>
+              <a
+                href="services.html#repair"
+                class="inline-block text-white font-semibold hover:underline"
+              >
+                Learn More →
+              </a>
+            </div>
+          </div>
+
+          <!-- Modernization Card -->
+          <div
+            class="service-card relative z-0 rounded-lg shadow-lg overflow-hidden h-64"
+            style="background: url('images/modernization.png') center/cover no-repeat;"
+          >
+            <!-- Invisible full-card link -->
             <a
               href="services.html#modernization"
-              class="inline-block text-white font-semibold hover:underline"
-            >
-              Learn More →
-            </a>
+              class="absolute inset-0 z-30"
+              aria-label="Modernization – Learn more"
+            ></a>
+
+            <div class="absolute inset-0 bg-black/70 z-10"></div>
+            <div class="relative z-20 p-6 flex flex-col h-full justify-end">
+              <h3 class="text-2xl font-semibold mb-2 text-white">
+                Modernization
+              </h3>
+              <p class="text-white flex-1 mb-4">
+                Upgrade aging systems for safety, efficiency, and ride
+                comfort—phased or full projects.
+              </p>
+              <a
+                href="services.html#modernization"
+                class="inline-block text-white font-semibold hover:underline"
+              >
+                Learn More →
+              </a>
+            </div>
           </div>
         </div>
+      </section>
 
-      </div>
-    </section>
-
-    <!-- Our Values Grid -->
-<section class="py-16 bg-white">
-  <div class="container mx-auto text-center mb-12 px-4">
-    <h2 class="text-3xl font-bold">Our Values</h2>
+      <!-- Meet The Team -->
+<section id="team" class="py-16 bg-[var(--color-bg-primary)]">
+  <div class="container mx-auto px-4 text-center mb-12">
+    <h2 class="section-title text-3xl font-bold inline-block">
+      Meet The Team
+    </h2>
   </div>
-  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4">
 
-    <div class="flex flex-col items-center text-center">
-      <h3 class="font-semibold text-xl mb-1">Reliable Performance</h3>
-      <p class="text-gray-600">
-        Elevators that operate smoothly, safely, and consistently with minimal downtime.
-      </p>
+  <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <!-- Team Member 1 -->
+    <div class="flex flex-col items-center space-y-4">
+      <img
+        src="images/scott_headshot.png"
+        alt="Scott Gaskill"
+        class="w-32 h-32 rounded-full object-cover shadow-md"
+      />
+      <h3 class="text-xl font-semibold text-[var(--color-text-primary)]">
+        Scott Gaskill
+      </h3>
+      <p class="text-[var(--color-muted)]">President/CEO</p>
     </div>
 
-    <div class="flex flex-col items-center text-center">
-      <h3 class="font-semibold text-xl mb-1">Clear Communication</h3>
-      <p class="text-gray-600">
-        Prompt, professional updates about service calls, repairs, violations, and scheduling — no surprises.
-      </p>
+    <!-- Team Member 2 -->
+    <div class="flex flex-col items-center space-y-4">
+      <img
+        src="images/jeff_headshot.jpg"
+        alt="Jeff Thompson"
+        class="w-32 h-32 rounded-full object-cover shadow-md"
+      />
+      <h3 class="text-xl font-semibold text-[var(--color-text-primary)]">
+        Jeff Thompson
+      </h3>
+      <p class="text-[var(--color-muted)]">VP GM</p>
     </div>
 
-    <div class="flex flex-col items-center text-center">
-      <h3 class="font-semibold text-xl mb-1">Rapid Emergency Response</h3>
-      <p class="text-gray-600">
-        Being available and dependable when customers need us most, especially during entrapments or outages.
+    <!-- Team Member 3 -->
+    <div class="flex flex-col items-center space-y-4">
+      <img
+        src="images/ben_headshot.jpg"
+        alt="Ben Rabin"
+        class="w-32 h-32 rounded-full object-cover shadow-md"
+      />
+      <h3 class="text-xl font-semibold text-[var(--color-text-primary)]">
+        Ben Rabin
+      </h3>
+      <p class="text-[var(--color-muted)]">
+        Need exact title
       </p>
     </div>
-
-    <div class="flex flex-col items-center text-center">
-      <h3 class="font-semibold text-xl mb-1">Proactive Service</h3>
-      <p class="text-gray-600">
-        Identifying and resolving issues before they become problems, through preventative maintenance and honest assessments.
-      </p>
-    </div>
-
-    <div class="flex flex-col items-center text-center">
-      <h3 class="font-semibold text-xl mb-1">Flexible, Creative Solutions</h3>
-      <p class="text-gray-600">
-        Adapting to unique customer needs, budgets, and timelines with customized, outside-the-box approaches.
-      </p>
-    </div>
-
-    <div class="flex flex-col items-center text-center">
-      <h3 class="font-semibold text-xl mb-1">Fairness & Transparency</h3>
-      <p class="text-gray-600">
-        Providing clear pricing, honest recommendations, with accurate proposals and invoicing.
-      </p>
-    </div>
-
-    <div class="flex flex-col items-center text-center">
-      <h3 class="font-semibold text-xl mb-1">Relationship-Driven Support</h3>
-      <p class="text-gray-600">
-        Acting as a true partner, not just a vendor — earning trust through integrity, responsiveness, and follow-through.
-      </p>
-    </div>
-
   </div>
 </section>
 
 
-    <!-- Survey Modal -->
-    <div
-      id="survey-modal"
-      class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="survey-title"
-    >
-      <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4 shadow-2xl">
-        <h3 id="survey-title" class="text-xl font-bold mb-4">How was your experience?</h3>
-        <div class="flex justify-between mb-4">
-          <button data-rating="1" class="star text-3xl" aria-label="1 star">☆</button>
-          <button data-rating="2" class="star text-3xl" aria-label="2 stars">☆</button>
-          <button data-rating="3" class="star text-3xl" aria-label="3 stars">☆</button>
-          <button data-rating="4" class="star text-3xl" aria-label="4 stars">☆</button>
-          <button data-rating="5" class="star text-3xl" aria-label="5 stars">☆</button>
+      <!-- Our Values Grid -->
+      <section class="py-16 bg-white">
+        <div class="container mx-auto text-center mb-12 px-4">
+          <h2 class="text-3xl font-bold text-darkgray section-title">Our Values</h2>
         </div>
-        <button
-          id="close-survey"
-          class="mt-2 text-sm hover:underline"
-          aria-label="Cancel survey"
-        >Cancel</button>
-      </div>
-    </div>
-
-    <!-- Internal Feedback Modal -->
-    <div
-      id="feedback-modal"
-      class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="feedback-title"
-    >
-      <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4 shadow-2xl">
-        <h3 id="feedback-title" class="text-xl font-bold mb-4">We’re sorry to hear that.</h3>
-        <p class="mb-4">Please tell us what went wrong, and we’ll make it right.</p>
-        <form id="feedback-form" class="space-y-4" aria-label="Internal feedback form">
-          <input
-            type="email"
-            placeholder="Your Email (required)"
-            class="w-full p-2 border rounded"
-            aria-label="Enter your email (required)"
-            required
-          />
-          <textarea
-            placeholder="Your feedback..."
-            class="w-full p-2 border rounded"
-            required
-            aria-label="Describe what went wrong"
-          ></textarea>
-          <div class="flex justify-between items-center">
-            <button
-              type="submit"
-              class="px-4 py-2 rounded"
-              aria-label="Submit feedback"
-            >Submit Feedback</button>
-            <button
-              type="button"
-              id="close-feedback"
-              class="text-sm hover:underline"
-              aria-label="Cancel feedback"
-            >Cancel</button>
+        <div
+          class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4"
+        >
+          <div class="flex flex-col items-center text-center">
+            <h3 class="font-semibold text-xl mb-1 text-darkgray">Reliable Performance</h3>
+            <p class="text-gray-600">
+              Elevators that operate smoothly, safely, and consistently with
+              minimal downtime.
+            </p>
           </div>
-        </form>
+
+          <div class="flex flex-col items-center text-center">
+            <h3 class="font-semibold text-xl mb-1 text-darkgray">Clear Communication</h3>
+            <p class="text-gray-600">
+              Prompt, professional updates about service calls, repairs,
+              violations, and scheduling — no surprises.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <h3 class="font-semibold text-xl mb-1 text-darkgray">
+              Rapid Emergency Response
+            </h3>
+            <p class="text-gray-600">
+              Being available and dependable when customers need us most,
+              especially during entrapments or outages.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <h3 class="font-semibold text-xl mb-1 text-darkgray">Proactive Service</h3>
+            <p class="text-gray-600">
+              Identifying and resolving issues before they become problems,
+              through preventative maintenance and honest assessments.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <h3 class="font-semibold text-xl mb-1 text-darkgray">
+              Flexible, Creative Solutions
+            </h3>
+            <p class="text-gray-600">
+              Adapting to unique customer needs, budgets, and timelines with
+              customized, outside-the-box approaches.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <h3 class="font-semibold text-xl mb-1 text-darkgray">Fairness & Transparency</h3>
+            <p class="text-gray-600">
+              Providing clear pricing, honest recommendations, with accurate
+              proposals and invoicing.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <h3 class="font-semibold text-xl mb-1 text-darkgray">
+              Relationship-Driven Support
+            </h3>
+            <p class="text-gray-600">
+              Acting as a true partner, not just a vendor — earning trust
+              through integrity, responsiveness, and follow-through.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Survey Modal -->
+      <div
+        id="survey-modal"
+        class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="survey-title"
+      >
+        <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4 shadow-2xl">
+          <h3 id="survey-title" class="text-xl font-bold mb-4">
+            How was your experience?
+          </h3>
+          <div class="flex justify-between mb-4">
+            <button data-rating="1" class="star text-3xl" aria-label="1 star">
+              ☆
+            </button>
+            <button data-rating="2" class="star text-3xl" aria-label="2 stars">
+              ☆
+            </button>
+            <button data-rating="3" class="star text-3xl" aria-label="3 stars">
+              ☆
+            </button>
+            <button data-rating="4" class="star text-3xl" aria-label="4 stars">
+              ☆
+            </button>
+            <button data-rating="5" class="star text-3xl" aria-label="5 stars">
+              ☆
+            </button>
+          </div>
+          <button
+            id="close-survey"
+            class="mt-2 text-sm hover:underline"
+            aria-label="Cancel survey"
+          >
+            Cancel
+          </button>
+        </div>
       </div>
+
+      <!-- Internal Feedback Modal -->
+      <div
+        id="feedback-modal"
+        class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="feedback-title"
+      >
+        <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4 shadow-2xl">
+          <h3 id="feedback-title" class="text-xl font-bold mb-4">
+            We’re sorry to hear that.
+          </h3>
+          <p class="mb-4">
+            Please tell us what went wrong, and we’ll make it right.
+          </p>
+          <form id="feedback-form" class="space-y-4" aria-label="Internal feedback form">
+            <input
+              type="email"
+              placeholder="Your Email (required)"
+              class="w-full p-2 border rounded"
+              aria-label="Enter your email (required)"
+              required
+            />
+            <textarea
+              placeholder="Your feedback..."
+              class="w-full p-2 border rounded"
+              required
+              aria-label="Describe what went wrong"
+            ></textarea>
+            <div class="flex justify-between items-center">
+              <button type="submit" class="px-4 py-2 rounded" aria-label="Submit feedback">
+                Submit Feedback
+              </button>
+              <button
+                type="button"
+                id="close-feedback"
+                class="text-sm hover:underline"
+                aria-label="Cancel feedback"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Floating Review Us Button (above) -->
+      <button
+        id="open-survey"
+        class="fixed bottom-24 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 shadow-lg"
+        aria-label="Open review survey"
+      >
+        Review Us
+      </button>
+
+      <!-- Floating Call-Now Button (below) -->
+      <a
+        href="tel:877-632-4278"
+        class="font-sans fixed bottom-8 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 flex items-center shadow-lg"
+        aria-label="Emergency service 24/7 — Call 877-632-4278"
+      >
+        <img
+          src="images/white_phone_transparent.png"
+          alt="Emergency Call Icon"
+          class="h-8 w-8 flex-shrink-0" />
+        <div class="flex flex-col ml-4">
+          <span class="text-lg font-bold leading-none">
+            Call: 877-632-4278
+          </span>
+          <span class="text-[11px] uppercase font-medium leading-none mt-1">
+            Available for emergency's 24/7
+          </span>
+        </div>
+      </a>
+
+      <!-- Footer placeholder (injected by header-footer.js) -->
+      <div id="site-footer"></div>
     </div>
+    <!-- end .site-wrapper -->
 
-    <!-- Floating Review Us Button (above) -->
-    <button
-      id="open-survey"
-      class="fixed bottom-24 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 shadow-lg"
-      aria-label="Open review survey"
-    >
-      Review Us
-    </button>
-
-    <!-- Floating Call-Now Button (below) -->
-    <a
-      href="tel:877-632-4278"
-      class="fixed bottom-8 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 flex items-center shadow-lg"
-      aria-label="Emergency service 24/7 — Call 877-632-4278"
-    >
-      <img
-        src="images/white_phone_transparent.png"
-        alt="Emergency Call Icon"
-        class="h-8 w-8 flex-shrink-0"
-      />
-      <div class="flex flex-col ml-4">
-        <span class="text-[11px] uppercase font-medium leading-none">Emergency 24/7 Dispatch</span>
-        <span class="text-lg font-bold leading-none">Call: 877-632-4278</span>
-      </div>
-    </a>
-
-    <!-- Footer placeholder (injected by header-footer.js) -->
-    <div id="site-footer"></div>
-  </div> <!-- end .site-wrapper -->
-
-  <!-- Required scripts -->
-  <script src="scripts/header-footer.js"></script>
-  <script src="scripts/survey.js"></script>
-  <script src="scripts/nav.js"></script>
-</body>
+    <!-- Required scripts -->
+    <script src="scripts/header-footer.js"></script>
+    <script src="scripts/survey.js"></script>
+    <script src="scripts/nav.js"></script>
+  </body>
 </html>

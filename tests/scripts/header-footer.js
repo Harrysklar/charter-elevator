@@ -18,7 +18,7 @@
   const headerHTML = `
     <header
       role="banner"
-      class="fixed top-0 left-0 right-0 z-50 bg-[var(--color-accent)] text-white w-full"
+      class="fixed top-0 left-0 right-0 z-50 bg-[#3B5F54] text-white w-full pt-2"
     >
 
       <!-- ─── Option 1: Mobile Mini-Bar + Dropdown Nav ──────────── -->
@@ -36,9 +36,9 @@
           <!-- logo -->
           <a href="index.html" class="block">
             <img
-              src="https://charterelevator.com/wp-content/uploads/2022/09/logo-centered.png"
+              src="images/charter_logo.png"
               alt="Charter Elevator Logo"
-              class="h-8"
+              class="h-8 w-auto"
             />
           </a>
 
@@ -65,24 +65,24 @@
           </ul>
         </nav>
       </div>
-      
-      <!-- ─── Desktop Two-Row Grid ────────────────────────────────────── -->
-      <div class="container mx-auto grid grid-cols-12 grid-rows-2 h-32 hidden md:grid">
-        <!-- Logo -->
-        <div class="col-span-3 row-span-2 flex items-center px-4">
-          <a href="index.html" class="block">
-            <img
-              src="https://charterelevator.com/wp-content/uploads/2022/09/logo-centered.png"
-              alt="Company Logo"
-              class="h-full w-auto"
-            />
-          </a>
-        </div>
+
+      <!-- desktop header grid -->
+      <div class="w-full grid grid-cols-12 grid-rows-2 h-32 hidden md:grid">
+      <!-- Logo (25% width) -->
+      <div class="col-span-3 row-span-2 p-4 flex items-center">
+        <a href="index.html" class="block w-full">
+          <img
+            src="images/charter_logo.png"
+            alt="Charter Elevator Logo"
+            class="w-full h-auto object-contain"
+          />
+        </a>
+      </div>
 
         <!-- Top-right contact -->
         <div class="col-span-9 row-span-1 flex justify-end items-center pr-4">
           <div class="flex flex-col items-center">
-            <div class="text-sm font-semibold">Available 24/7 for Emergencies!</div>
+            <div class="text-sm font-semibold">24/7 emergency service</div>
             <a
               href="tel:877-632-4278"
               class="font-bold text-xl underline text-white"
@@ -97,11 +97,11 @@
           class="col-span-9 row-span-1 flex items-center"
         >
           <!-- Desktop links -->
-          <ul id="nav-links" class="flex flex-1 justify-evenly font-medium">
-            <li><a href="index.html"      class="nav-link text-white hover:text-[var(--color-cta)]">About Us</a></li>
-            <li><a href="services.html"   class="nav-link text-white hover:text-[var(--color-cta)]">Services</a></li>
-            <li><a href="locations.html"  class="nav-link text-white hover:text-[var(--color-cta)]">Locations</a></li>
-            <li><a href="contact.html"    class="nav-link text-white hover:text-[var(--color-cta)]">Contact Us</a></li>
+          <ul id="nav-links" class="flex flex-1 justify-evenly font-medium text-lg">
+            <li><a href="index.html"      class="nav-link px-4 py-2 text-white hover:text-[var(--color-cta)]">About Us</a></li>
+            <li><a href="services.html"   class="nav-link px-4 py-2 text-white hover:text-[var(--color-cta)]">Services</a></li>
+            <li><a href="locations.html"  class="nav-link px-4 py-2 text-white hover:text-[var(--color-cta)]">Locations</a></li>
+            <li><a href="contact.html"    class="nav-link px-4 py-2 text-white hover:text-[var(--color-cta)]">Contact Us</a></li>
           </ul>
           <!-- mobile hamburger sits here only on md:hidden screens, but we've already handled that above -->
         </nav>
@@ -142,7 +142,7 @@
       <div>
         <h4 class="font-semibold mb-4">Our Headquarters</h4>
         <p class="text-gray-200">
-          9751 Moose Rd., Unit #9<br />
+          9751 Moose Road., Unit 9<br />
           Murrells Inlet, SC 29576
         </p>
       </div>
@@ -152,7 +152,7 @@
         <h4 class="font-semibold mb-4">Contact</h4>
         <p class="text-gray-200">
           Phone: <a href="tel:877-632-4278" class="hover:text-orange-500">877-632-4278</a><br />
-          Email: <a href="mailto:info@charterelevator.com" class="hover:text-orange-500">info@charterelevator.com</a>
+          Email: <a href="mailto:info@CharterElevator.com" class="hover:text-orange-500">info@CharterElevator.com</a>
         </p>
       </div>
     </div>

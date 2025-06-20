@@ -18,7 +18,7 @@
   const headerHTML = `
     <header
       role="banner"
-      class="fixed top-0 left-0 right-0 z-50 bg-[#41594F] text-white w-full pt-2"
+      class="fixed top-0 left-0 right-0 z-50 bg-[#EAF3EE] text-black w-full pt-2"
     >
 
       <!-- ─── Option 1: Mobile Mini-Bar + Dropdown Nav ──────────── -->
@@ -85,7 +85,7 @@
             <div class="text-sm font-semibold">24/7 emergency service</div>
             <a
               href="tel:877-632-4278"
-              class="font-bold text-xl underline text-white"
+              class="font-bold text-xl underline text-black"
             >877-632-4278</a>
           </div>
         </div>
@@ -98,10 +98,10 @@
         >
           <!-- Desktop links -->
           <ul id="nav-links" class="flex flex-1 justify-evenly font-medium text-lg">
-            <li><a href="index.html"      class="nav-link px-4 py-2 text-white hover:text-[var(--color-cta)]">About Us</a></li>
-            <li><a href="services.html"   class="nav-link px-4 py-2 text-white hover:text-[var(--color-cta)]">Services</a></li>
-            <li><a href="locations.html"  class="nav-link px-4 py-2 text-white hover:text-[var(--color-cta)]">Locations</a></li>
-            <li><a href="contact.html"    class="nav-link px-4 py-2 text-white hover:text-[var(--color-cta)]">Contact Us</a></li>
+            <li><a href="index.html"      class="nav-link px-4 py-2 text-black hover:text-[var(--color-cta)]">About Us</a></li>
+            <li><a href="services.html"   class="nav-link px-4 py-2 text-black hover:text-[var(--color-cta)]">Services</a></li>
+            <li><a href="locations.html"  class="nav-link px-4 py-2 text-black hover:text-[var(--color-cta)]">Locations</a></li>
+            <li><a href="contact.html"    class="nav-link px-4 py-2 text-black hover:text-[var(--color-cta)]">Contact Us</a></li>
           </ul>
           <!-- mobile hamburger sits here only on md:hidden screens, but we've already handled that above -->
         </nav>

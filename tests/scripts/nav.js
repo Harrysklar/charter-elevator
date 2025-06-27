@@ -7,22 +7,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const miniMenu     = document.getElementById('mob-menu');
   const headerEl     = document.querySelector('header');
 
+  // Helper: bind both touchstart (preventing the synthetic click) and click
+  function bindTap(el, fn) {
+    el.addEventListener('touchstart', e => {
+      e.preventDefault();
+      fn();
+    });
+    el.addEventListener('click', fn);
+  }
+
   // 1) Toggle shared mobile nav (desktop → mobile)
   if (navToggle && mobileMenu) {
-    navToggle.addEventListener('click', () =>
+    bindTap(navToggle, () =>
       mobileMenu.classList.toggle('hidden')
     );
   }
 
   // 2) Toggle mini-bar dropdown (Option 1)
   if (miniToggle && miniMenu) {
-    miniToggle.addEventListener('click', () =>
+    bindTap(miniToggle, () =>
       miniMenu.classList.toggle('hidden')
     );
   }
 
   // 3) Close both menus when clicking outside of them
   document.addEventListener('click', (e) => {
+    
+    // Nothing to do if we don't have a header
+    if (!headerEl) return;
+
     // if click is anywhere in the header, ignore it
     if (headerEl.contains(e.target)) return;
 

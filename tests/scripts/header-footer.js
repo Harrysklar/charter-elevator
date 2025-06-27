@@ -25,7 +25,7 @@
   <div class="relative h-16 bg-[#EAF3EE]">
     <!-- hamburger (left) -->
     <button id="mob-hamburger"
-            class="absolute left-3 top-1/2 transform -translate-y-1/2 p-2 focus:outline-none">
+            class="absolute left-3 top-1/2 transform -translate-y-1/2 p-2 focus:outline-none z-20">
       <svg class="h-6 w-6" fill="none" stroke="black" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16" />
@@ -33,7 +33,7 @@
     </button>
 
     <!-- logo (centered) -->
-    <div class="absolute inset-0 flex items-center justify-center">
+    <div class="absolute inset-0 flex items-center justify-center z-10">
       <a href="index.html">
         <img src="images/charter_logo.png"
              alt="Charter Elevator Logo"
@@ -43,7 +43,7 @@
 
     <!-- survey trigger (right) -->
     <button id="mob-survey"
-            class="absolute right-3 top-1/2 transform -translate-y-1/2 p-2 focus:outline-none text-black">
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 p-2 focus:outline-none text-black z-20">
       <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 
                  9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
@@ -70,9 +70,9 @@
     </div>
 
       <!-- desktop header grid -->
-      <div class="w-full grid grid-cols-12 grid-rows-2 h-32 hidden md:grid">
+      <div class="w-full grid grid-cols-12 grid-rows-2 h-32 hidden md:grid items-center content-center">
       <!-- Logo (25% width) -->
-      <div class="col-span-3 row-span-2 p-4 flex items-center">
+      <div class="col-span-3 row-span-2 px-4 flex items-center">
         <a href="index.html" class="block w-full">
           <img
             src="images/charter_logo.png"

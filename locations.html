@@ -40,14 +40,17 @@
       <h2 class="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)]">Our Office Locations</h2>
       <!-- full-width relative wrapper -->
       <div class="relative overflow-hidden rounded-lg w-full lg:max-w-4xl lg:mx-auto">
+        <picture>
+        <source media="(max-width: 639px)" srcset="images/mobile_map.png"/>
         <!-- Base map image -->
         <img
           src="images/map.jpg"
           alt="Map of North & South Carolina service areas"
           class="w-full h-auto object-cover"
         />
-
+        </picture>
         <!-- Pins overlay -->
+        <div class="hidden sm:block absolute inset-0">
         <div class="absolute top-[30%] left-[43%]">
           <svg class="w-9 h-9 text-brandgreen transform transition-transform duration-200 hover:scale-150" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
@@ -78,7 +81,7 @@
             <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
           </svg>
         </div>
-
+        </div>
       </div>
 
       <!-- Office list centered & spaced -->

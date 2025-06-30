@@ -155,7 +155,7 @@
         <h4 class="font-semibold mb-4">Contact</h4>
         <p class="text-gray-200">
           Phone: <a href="tel:877-632-4278" class="hover:text-orange-500">877-632-4278</a><br />
-          Email: <a href="mailto:info@CharterElevator.com" class="hover:text-orange-500">info@CharterElevator.com</a>
+          Email: <a href="mailto:Info@CharterElevator.com" class="hover:text-orange-500">Info@CharterElevator.com</a>
         </p>
       </div>
     </div>

@@ -168,13 +168,6 @@
   const footerContainer = document.getElementById('site-footer');
   if (footerContainer) footerContainer.innerHTML = footerHTML;
 
-  // ─── Wire up Option 1 mobile interactions ─────────────────────────────────
-  document.getElementById('mob-hamburger').addEventListener('click', () => {
-    const panel = document.getElementById('mob-logo-panel');
-    panel.style.maxHeight = panel.scrollHeight && panel.style.maxHeight !== '0px'
-      ? '0'
-      : panel.scrollHeight + 'px';
-  });
   document.getElementById('mob-survey').addEventListener('click', () =>
     document.getElementById('open-survey').click()
   );

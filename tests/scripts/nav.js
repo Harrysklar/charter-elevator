@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Helper: bind both touchstart (preventing the synthetic click) and click
   function bindTap(el, fn) {
-    el.addEventListener('touchstart', e => {
+    el.addEventListener('touchend', e => {
+      // prevent the *next* synthetic click from firing,
+      // but only after we've run our toggle
       e.preventDefault();
       fn();
     });

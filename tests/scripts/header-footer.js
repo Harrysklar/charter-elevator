@@ -37,7 +37,7 @@
       <a href="index.html">
         <img src="images/charter_logo.png"
              alt="Charter Elevator Logo"
-             class="h-32 w-auto object-contain" />
+             class="h-32 w-auto max-w-full object-contain" />
       </a>
     </div>
 
@@ -77,7 +77,7 @@
           <img
             src="images/charter_logo.png"
             alt="Charter Elevator Logo"
-            class="w-full h-auto object-contain"
+            class="w-full h-auto max-w-[260px] object-contain"
           />
         </a>
       </div>

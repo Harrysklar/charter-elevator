@@ -62,7 +62,7 @@
           <li>
             <button
               id="mob-survey-2"
-              class="w-full text-left text-black font-medium"
+              class="w-full text-left text-black font-medium hover:text-orange-500"
             >Leave Feedback</button>
           </li>
         </ul>

@@ -202,6 +202,7 @@
 
     <!-- Floating Call-Now Button (below) -->
       <a
+        id="call-now"
         href="tel:877-632-4278"
         class="font-sans fixed bottom-8 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 flex items-center shadow-lg"
         aria-label="Emergency service 24/7 — Call 877-632-4278"
@@ -228,5 +229,25 @@
   <script src="scripts/header-footer.js"></script>
   <script src="scripts/survey.js"></script>
   <script src="scripts/nav.js"></script>
+  <script>
+    const floatButtons = [
+      document.getElementById('open-survey'), // Review Us
+      document.getElementById('call-now')     // Call Now
+    ];
+
+    const fields = document.querySelectorAll('input, textarea');
+
+    fields.forEach(field => {
+      field.addEventListener('focus', () => {
+        floatButtons.forEach(btn => btn.style.display = 'none');
+      });
+
+      field.addEventListener('blur', () => {
+        floatButtons.forEach(btn => btn.style.display = '');
+      });
+    });
+  </script>
+
+
 </body>
 </html>

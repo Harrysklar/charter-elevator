@@ -33,7 +33,7 @@
       <!-- Hero Section -->
       <section
         class="relative h-screen bg-cover bg-center flex items-center justify-center"
-        style="background-image: url('images/hero.JPG')"
+        style="background-image: url('images/hero.jpg')"
       >
         <div class="absolute inset-0 bg-black/50"></div>
         <div class="relative text-center px-4">
@@ -55,24 +55,17 @@
       <!-- Hero Card (condensed on mobile, full on desktop, capped on lg+) -->
 <section class="py-16 bg-white">
   <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 items-stretch rounded-lg shadow-lg overflow-hidden">
-      
-      <!-- Left: image; full height up through md, max-height 75vh on lg+ -->
-      <div class="h-full lg:max-h-[75vh] overflow-hidden">
-        <img
-          src="images/hero_ai_logo_round.png"
-          alt="Charter Elevator technician at work"
-          class="w-full h-full object-cover"
-        />
-      </div>
+    <div class="rounded-lg shadow-lg overflow-hidden bg-white p-6 md:p-12 space-y-6">
 
       <!-- Right: responsive text -->
       <div class="bg-white">
         <!-- Mobile: condensed text -->
         <div class="p-6 flex flex-col justify-center space-y-4 block md:hidden h-full">
-          <h2 class="text-2xl font-bold text-darkgray">
-            About Charter Elevator.
-          </h2>
+          <div class="text-center">
+            <h2 class="text-2xl font-bold text-darkgray section-title">
+              About Charter Elevator.
+            </h2>
+          </div>
           <div class="w-12 h-1 bg-brandgreen"></div>
           <p class="text-sm text-gray-700 leading-relaxed">
             For more than a decade, Charter Elevator has re-defined what building owners and property managers expect from an elevator partner.
@@ -82,13 +75,21 @@
             Charter is your reliable partner for proactive maintenance, rapid-response repairs, or a full modernization.
             Our recommendations are crafted around your building, your budget, and your long-term goals.
           </p>
+          <ul class="list-disc list-inside space-y-2">
+            <li><strong>Proactive service, not reactive fixes</strong> – Data-driven maintenance programs that prevent downtime before it starts.</li>
+            <li><strong>Straight talk and fair pricing</strong> – Clear scopes, no surprise fees, and pricing you can understand.</li>
+            <li><strong>People-first technicians</strong> – Highly trained professionals who treat your property—and your tenants—with respect.</li>
+            <li><strong>Responsive</strong> – We are always just a phone call away from first conversation to final inspection.</li>
+          </ul>
         </div>
 
         <!-- Desktop: full text -->
         <div class="p-8 flex flex-col justify-center space-y-4 hidden md:flex h-full">
-          <h2 class="text-3xl font-bold text-darkgray section-title">
-            About Charter Elevator.
-          </h2>
+          <div class="text-center">
+            <h2 class="text-3xl font-bold text-darkgray section-title">
+              About Charter Elevator.
+            </h2>
+          </div>
           <div class="w-16 h-1 bg-brandgreen"></div>
           <p class="text-base text-gray-700 leading-relaxed">
             For more than a decade, Charter Elevator has re-defined what building owners and property managers expect from an elevator partner.
@@ -468,6 +469,7 @@
 
       <!-- Floating Call-Now Button (below) -->
       <a
+        id="call-now"
         href="tel:877-632-4278"
         class="font-sans fixed bottom-8 right-8 z-50 bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-5 py-3 flex items-center shadow-lg"
         aria-label="Emergency service 24/7 — Call 877-632-4278"
@@ -495,5 +497,23 @@
     <script src="scripts/header-footer.js"></script>
     <script src="scripts/survey.js"></script>
     <script src="scripts/nav.js"></script>
+    <script>
+    const floatButtons = [
+      document.getElementById('open-survey'), // Review Us
+      document.getElementById('call-now')     // Call Now
+    ];
+
+    const fields = document.querySelectorAll('input, textarea');
+
+    fields.forEach(field => {
+      field.addEventListener('focus', () => {
+        floatButtons.forEach(btn => btn.style.display = 'none');
+      });
+
+      field.addEventListener('blur', () => {
+        floatButtons.forEach(btn => btn.style.display = '');
+      });
+    });
+  </script>
   </body>
 </html>

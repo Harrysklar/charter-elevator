@@ -134,10 +134,10 @@
       <div>
         <h4 class="font-semibold mb-4">Quick Links</h4>
         <ul class="space-y-2">
-          <li><a href="index.html" class="hover:text-orange-500">About Us</a></li>
-          <li><a href="services.html" class="hover:text-orange-500">Services</a></li>
-          <li><a href="locations.html" class="hover:text-orange-500">Locations</a></li>
-          <li><a href="contact.html" class="hover:text-orange-500">Contact Us</a></li>
+          <li><a href="index.html" class="hover:text-orange-500 hover:underline">About Us</a></li>
+          <li><a href="services.html" class="hover:text-orange-500 hover:underline">Services</a></li>
+          <li><a href="locations.html" class="hover:text-orange-500 hover:underline">Locations</a></li>
+          <li><a href="contact.html" class="hover:text-orange-500 hover:underline">Contact Us</a></li>
         </ul>
       </div>
 
@@ -145,7 +145,7 @@
       <div>
         <h4 class="font-semibold mb-4">Our Headquarters</h4>
         <p class="text-gray-200">
-          <a href="https://www.google.com/maps/place/Charter+Elevator/@33.5874691,-79.0304563,15.77z/data=!4m15!1m8!3m7!1s0x89003fd2e07c75db:0x80fed9cd60432d5f!2sCharter+Elevator!8m2!3d33.5877564!4d-79.0284156!10e1!16s%2Fg%2F11xmx751v3!3m5!1s0x89003fd2e07c75db:0x80fed9cd60432d5f!8m2!3d33.5877564!4d-79.0284156!16s%2Fg%2F11xmx751v3?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" class="hover:text-orange-500">9751 Moose Road, Unit 9<br />
+          <a href="https://www.google.com/maps/place/Charter+Elevator/@33.5874691,-79.0304563,15.77z/data=!4m15!1m8!3m7!1s0x89003fd2e07c75db:0x80fed9cd60432d5f!2sCharter+Elevator!8m2!3d33.5877564!4d-79.0284156!10e1!16s%2Fg%2F11xmx751v3!3m5!1s0x89003fd2e07c75db:0x80fed9cd60432d5f!8m2!3d33.5877564!4d-79.0284156!16s%2Fg%2F11xmx751v3?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" class="hover:text-orange-500 hover:underline">9751 Moose Road, Unit 9<br />
           Murrells Inlet, SC 29576
           </a>
         </p>
@@ -155,8 +155,8 @@
       <div>
         <h4 class="font-semibold mb-4">Contact</h4>
         <p class="text-gray-200">
-          Phone: <a href="tel:877-632-4278" class="hover:text-orange-500">877-632-4278</a><br />
-          Email: <a href="mailto:Info@CharterElevator.com" class="hover:text-orange-500">Info@CharterElevator.com</a>
+          Phone: <a href="tel:877-632-4278" class="hover:text-orange-500 hover:underline">877-632-4278</a><br />
+          Email: <a href="mailto:Info@CharterElevator.com" class="hover:text-orange-500 hover:underline">Info@CharterElevator.com</a>
         </p>
       </div>
     </div>

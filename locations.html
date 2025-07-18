@@ -7,10 +7,11 @@
 
   <!-- Tailwind CDN loader -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
   <!-- 1) Define brand colors -->
     <script>
       tailwind.config = {
+        content: ["./**/*.html"], // Ensures all HTML files are scanned for class names
         theme: {
           extend: {
             colors: {

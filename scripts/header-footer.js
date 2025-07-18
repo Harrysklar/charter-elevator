@@ -24,7 +24,7 @@
 <div class="md:hidden">
   <div class="relative h-16 bg-[#EAF3EE]">
     <!-- hamburger (left) -->
-    <button id="mob-hamburger"
+    <button id="mob-hamburger aria-label="Toggle mobile menue""
             class="absolute left-3 top-1/2 transform -translate-y-1/2 p-2 focus:outline-none z-20">
       <svg class="h-6 w-6" fill="none" stroke="black" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -42,7 +42,7 @@
     </div>
 
     <!-- survey trigger (right) -->
-    <button id="mob-survey"
+    <button id="mob-survey aria-label="Open feedback survey""
             class="absolute right-3 top-1/2 transform -translate-y-1/2 p-2 focus:outline-none text-black z-20">
       <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 

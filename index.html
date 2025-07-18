@@ -10,6 +10,7 @@
     <!-- 1) Define brand colors -->
     <script>
       tailwind.config = {
+        content: ["./**/*.html"], // Ensures all HTML files are scanned for class names
         theme: {
           extend: {
             colors: {
@@ -66,7 +67,6 @@
               About Charter Elevator.
             </h2>
           </div>
-          <div class="w-12 h-1 bg-brandgreen"></div>
           <p class="text-sm text-gray-700 leading-relaxed">
             For more than a decade, Charter Elevator has re-defined what building owners and property managers expect from an elevator partner.
             Founded by former Otis President Bill Miller, we blend world-class elevator expertise with the responsiveness of a local, owner-led team.

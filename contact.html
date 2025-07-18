@@ -12,7 +12,12 @@
   <!-- 1) Define brand colors -->
     <script>
       tailwind.config = {
-        content: ["./**/*.html"], // Ensures all HTML files are scanned for class names
+        safelist: [
+        'text-5xl', 'text-4xl', 'text-xl', 'text-lg', 'font-bold', 'font-semibold',
+        'py-2', 'py-3', 'px-4', 'px-5', 'rounded-full', 'shadow-lg',
+        'hover:underline', 'hover:text-orange-500', 'bg-[#005587]', 'text-white'
+        // Add more as needed (based on what looks wrong)
+        ],
         theme: {
           extend: {
             colors: {

@@ -6,30 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Charter Elevator • Contact Us</title>
 
-  <!-- Tailwind CDN loader -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CDN loader with plugins if needed -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
-  <!-- 1) Define brand colors -->
-    <script>
-      tailwind.config = {
-        safelist: [
-        'text-5xl', 'text-4xl', 'text-xl', 'text-lg', 'font-bold', 'font-semibold',
-        'py-2', 'py-3', 'px-4', 'px-5', 'rounded-full', 'shadow-lg',
-        'hover:underline', 'hover:text-orange-500', 'bg-[#005587]', 'text-white'
-        // Add more as needed (based on what looks wrong)
-        ],
-        theme: {
-          extend: {
-            colors: {
-              coolgray1: '#D9D8D6', /* Pantone Cool Gray 1 C */
-              brandgreen: '#59796D', /* Pantone 5555 C */
-              darkgray: '#2C2E2F', /* Pantone 426 C */
-              darkgreen: '#1F2A23', /* Pantone 5605 C */
-            }
+  <!-- ✅ Tailwind config (runs BEFORE styles render) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            coolgray1: '#D9D8D6',  // Pantone Cool Gray 1 C
+            brandgreen: '#59796D', // Pantone 5555 C
+            darkgray: '#2C2E2F',   // Pantone 426 C
+            darkgreen: '#1F2A23'   // Pantone 5605 C
           }
         }
       }
-    </script>
+    };
+  </script>
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles/style.css" />

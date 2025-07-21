@@ -31,27 +31,35 @@
     <!-- Header placeholder (injected by header-footer.js) -->
     <div id="site-header"></div>
     <div class="site-wrapper">
-      <!-- Hero Section -->
-      <section
-        class="relative h-screen bg-cover bg-center flex items-center justify-center"
-        style="background-image: url('images/charter_hero.jpg')"
-      >
-        <div class="absolute inset-0 bg-black/50"></div>
-        <div class="relative text-center px-4">
-          <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
-            Reliable Elevator Service, 24/7
-          </h1>
-          <p class="text-lg md:text-xl text-white mb-6 max-w-2xl mx-auto">
-            Charter Elevator delivers high quality solutions you can trust.
-          </p>
-          <a
-            href="contact.html"
-            class="inline-block bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-6 py-3 font-semibold transition"
-          >
-            Get Started
-          </a>
-        </div>
-      </section>
+    <!-- Hero Section (with img instead of background-image) -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+  <!-- Fullscreen background image -->
+  <img
+    src="images/charter_hero.jpg"
+    alt="Charter Elevator technicians"
+    class="absolute inset-0 w-full h-full object-cover sm:object-center object-left"
+  />
+
+  <!-- Overlay dark tint -->
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- Hero content -->
+  <div class="relative text-center px-4">
+    <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+      Reliable Elevator Service, 24/7
+    </h1>
+    <p class="text-lg md:text-xl text-white mb-6 max-w-2xl mx-auto">
+      Charter Elevator delivers high quality solutions you can trust.
+    </p>
+    <a
+      href="contact.html"
+      class="inline-block bg-[#005587] hover:bg-[#1E77AE] text-white hover:text-white rounded-full px-6 py-3 font-semibold transition"
+    >
+      Get Started
+    </a>
+  </div>
+</section>
+
 
       <!-- Hero Card (condensed on mobile, full on desktop, capped on lg+) -->
 <section class="py-16 bg-white">

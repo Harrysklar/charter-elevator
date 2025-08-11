@@ -1,0 +1,194 @@
+/* custom.css */
+
+/* 1) Brand color variables */
+:root {
+  --color-bg-primary:   #ffffff;   /* primary page background */
+  --color-bg-secondary: #D9D8D6;   /* coolgray1, secondary panels */
+  --color-text-primary: #2C2E2F;   /* darkgray */
+  --color-accent:       #59796D;   /* brandgreen */
+  --color-accent-dark:  #1F2A23;   /* darkgreen */
+  --color-cta:          #F29300;   /* secondary CTA color */
+  --color-surface:      #F5F7FA;   /* light surface */
+  --color-muted:        #637381;   /* muted text */
+}
+
+/* 2) Base styles */
+html {
+  overflow-y: scroll;       /* reserve scrollbar */
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+/* 3) Site-wrapper & layout helpers */
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 4rem); /* account for fixed header */
+  background-color: var(--color-bg-primary);
+}
+
+#site-footer {
+  margin-top: auto;
+}
+
+/* 4) Typography */
+h1, h2, h3 {
+  color: var(--color-text-primary);
+}
+
+/* 5) Links */
+a {
+  color: var(--color-accent);
+}
+a:hover {
+  color: var(--color-cta);
+}
+
+/* 6) Buttons */
+.btn-primary {
+  background-color: var(--color-cta);
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: #d67e00;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: var(--color-surface);
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.btn-secondary:hover {
+  background-color: var(--color-accent);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* 7) Form elements */
+input, textarea, select {
+  border: 1px solid var(--color-muted);
+  background-color: #fff;
+  color: var(--color-text-primary);
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-accent);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(89, 121, 109, 0.2); /* brandgreen @ 20% */
+}
+
+/* 8) Section backgrounds */
+#services, #about {
+  background-color: var(--color-surface);
+}
+
+/* 9) Utility */
+.text-secondary {
+  color: var(--color-cta);
+}
+
+/* 10) Floating call-now */
+.btn-call {
+  position: fixed;
+  bottom: 2rem;
+  left: 1rem;
+  background-color: var(--color-cta);
+  color: #fff;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.btn-call:hover {
+  transform: scale(1.05);
+  background-color: #d67e00;
+}
+
+/* 11) Service cards hover */
+.service-card {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* full-width bright-green underline under every h2.section-title */
+.section-title {
+  display: block;            /* so width:100% applies */
+  padding-bottom: 0.5rem;    /* space for the underline */
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;               /* same as border-b-2 */
+  width: 100%;               /* full width of the h2 block */
+  background-color: #68D391; /* Tailwind green-400 */
+}
+
+/* Performance and mobile improvements */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Faster transitions */
+a, button {
+    transition: all 0.2s ease;
+}
+
+/* Prevent flash of unstyled content 
+.site-wrapper {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in forwards;
+}
+*/
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fix logo container and prevent overflow */
+header .absolute.inset-0 {
+    overflow: hidden !important;
+}
+
+header img[alt="Charter Elevator Logo"] {
+    max-height: 60px !important; /* Ensures it fits in 64px header */
+    max-width: 200px !important;
+}
+
+/* Desktop logo constraints */
+@media (min-width: 768px) {
+    header img[alt="Charter Elevator Logo"] {
+        max-height: 120px !important; /* Ensures it fits in 128px header */
+        max-width: 260px !important;
+    }
+}
+
+header, header * {
+    background-color: #EAF3EE !important;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
